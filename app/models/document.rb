@@ -4,10 +4,9 @@ class Document < ActiveRecord::Base
   has_many :files, :class_name=>"Lolita::Upload::File",:as=>:fileable
 
   lolita do
-    tabs do
-      tab :content
-      
-      tab(:files)
+    tab :content do
+      field :title, :text
     end
+    tab(:files)
   end
 end
