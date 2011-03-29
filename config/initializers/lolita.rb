@@ -12,5 +12,6 @@ Lolita.setup do |config|
   #  current_user.is_a?(Admin) || current_user.has_role?(:admin)
   # }
   
-  
+   config.user_classes << User
+   config.authentication=:authenticate_user!
 end

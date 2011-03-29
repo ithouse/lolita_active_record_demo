@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110323221437) do
+ActiveRecord::Schema.define(:version => 20110329085623) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -19,16 +19,37 @@ ActiveRecord::Schema.define(:version => 20110323221437) do
   end
 
   create_table "lolita_files", :force => true do |t|
-    t.string  "asset"
-    t.string  "name"
-    t.string  "fileable_type"
-    t.integer "fileable_id"
-    t.string  "asset_extension", :limit => 12
-    t.integer "asset_size"
+    t.string   "asset"
+    t.string   "name"
+    t.string   "fileable_type"
+    t.integer  "fileable_id"
+    t.string   "asset_extension", :limit => 12
+    t.integer  "asset_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "lolita_files", ["asset_size"], :name => "index_lolita_files_on_asset_size"
   add_index "lolita_files", ["fileable_type", "fileable_id"], :name => "index_lolita_files_on_fileable_type_and_fileable_id"
   add_index "lolita_files", ["fileable_type"], :name => "index_lolita_files_on_fileable_type"
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
