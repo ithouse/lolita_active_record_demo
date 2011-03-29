@@ -4,8 +4,10 @@ require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
-require File.expand_path("../lolita/lib/lolita")
-require File.expand_path("../lolita-file-upload/lib/lolita-file-upload")
+if Rails.env.to_sym==:development
+    require File.expand_path("../lolita/lib/lolita")
+    require File.expand_path("../lolita-file-upload/lib/lolita-file-upload")
+end
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module LolitaActiveRecordDemo
