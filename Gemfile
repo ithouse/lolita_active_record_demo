@@ -6,7 +6,7 @@ gem "will_paginate"
 gem "devise"
 
 # Bundle edge Rails instead:
-group :staging,:production
+group :staging,:production do
   gem "lolita",:git=>"git://github.com/ithouse/lolita.git"
   gem "lolita-file-upload",:git=>"git://github.com/ithouse/lolita-file-upload.git"
 end
