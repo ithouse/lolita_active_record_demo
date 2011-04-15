@@ -2,10 +2,14 @@ class Document < ActiveRecord::Base
   include Lolita::Configuration
 
   has_many :files, :class_name=>"Lolita::Upload::File",:as=>:fileable
-
+  validates :title, :presence=>true
   lolita do
     tab :content do
-      field :title, :text
+      field :title, :builder=>:text
+    end
+    report("My report") do
+      name "test"
+      fields :title
     end
     tab(:files)
   end

@@ -1,14 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '~>3.0.0'
 gem "carrierwave"
 gem "will_paginate"
 gem "devise"
+gem "ruport"
+gem "spreadsheet"
 
 # Bundle edge Rails instead:
-group :staging,:production do
-  gem "lolita",:git=>"git://github.com/ithouse/lolita.git"
-  gem "lolita-file-upload",:git=>"git://github.com/ithouse/lolita-file-upload.git"
+group :production do
+  #gem "lolita",:git=>"git://github.com/ithouse/lolita.git"
+  #gem "lolita-file-upload",:git=>"git://github.com/ithouse/lolita-file-upload.git"
 end
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

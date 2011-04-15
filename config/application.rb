@@ -7,6 +7,7 @@ require 'rails/all'
 if Rails.env.to_sym==:development
     require File.expand_path("../lolita/lib/lolita")
     require File.expand_path("../lolita-file-upload/lib/lolita-file-upload")
+    require File.expand_path("../lolita-report/lib/lolita-report")
 end
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
