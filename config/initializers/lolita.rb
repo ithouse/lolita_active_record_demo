@@ -15,7 +15,3 @@ Lolita.setup do |config|
    config.user_classes << User
    config.authentication=:authenticate_user!
 end
-
-Lolita::Hooks.component(:"lolita/navigation/display").around do
-  "<div style='border:2px solid black'>#{let_content}</div>"
-end

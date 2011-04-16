@@ -7,6 +7,10 @@ class Document < ActiveRecord::Base
     tab :content do
       field :title, :builder=>:text
     end
+    report "Other report" do
+      name "test1"
+      fields :title
+    end
     report("My report") do
       name "test"
       fields :title

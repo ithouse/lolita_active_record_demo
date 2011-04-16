@@ -42,7 +42,7 @@ header nav .username {margin-right: 15px;}
   padding: 5px 10px;
 }
 #main .box form .field-value { margin-top: 5px;}
-#main .box form .field-value input {
+#main .box form .field-value input, #main .box form .field-value textarea {
   border: 1px solid #cdcdcd;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -65,6 +65,8 @@ header nav .username {margin-right: 15px;}
 /* error fields and notifications */
 .field_with_errors input,
 .field_with_errors textarea {background: #ffe6e7;}
+.inline-errors {padding-top: 3px; color:#F66; font-size: 110%;}
+.errorExplanation {color:#F66; font-size: 110%; padding:25px 25px 0; background:white;}
 
 #flash {
   position: fixed;
@@ -97,6 +99,7 @@ header nav .username {margin-right: 15px;}
 /* navigation styles on left */
 #main nav {position: absolute; left: 0; min-width: 150px; margin-top: 5px;} /* width just for now */ 
 #main nav ul {margin-bottom: 50px;}
+#main nav ul.subtree{margin-bottom: 0px;}
 #main nav ul li a {display: block; padding: 10px 15px; color: #737373;}
 #main nav ul li.active a {
   background: #d9d9d9; 
@@ -107,6 +110,19 @@ header nav .username {margin-right: 15px;}
   -moz-border-radius: 5px 0 0 5px;
   -webkit-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
+}
+#main nav ul li.with-subtree a{
+  border-radius: 5px 0 0 0;
+}
+#main nav ul li.active ul.subtree a{
+  background: #fff; 
+  background: -moz-linear-gradient(left, #fff, #fff);
+  background: -webkit-linear-gradient(left, #fff, #fff); 
+  border: 1px solid #f9f9f9; 
+  border-radius: 0 0 0 0;
+}
+#main nav ul li.active ul.subtree li.last-in-subtree a{
+  border-radius: 0 0 0 5px;
 }
 /* --------------------------------------------- */
 
@@ -187,6 +203,22 @@ a.create {
   box-shadow: inset 0px 1px 1px #ddd;
 } 
 
+/* filter */
+#main form.filter {
+  background: #F3F3F3;
+  padding: 10px;
+}
+#main form.filter select {
+  margin-right: 15px;
+  margin-bottom: 3px;
+}
+#main form.filter input {
+  vertical-align: middle;
+  margin: 0 10px 2px 3px;
+}
+#main form.filter label {
+  color: #666;
+}
 /* --------------------------------------------- */
 
 /* TinyMCE advanced theme's skin "Cirkuit" overrides */

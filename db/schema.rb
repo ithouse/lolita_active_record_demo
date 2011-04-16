@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110329085623) do
+ActiveRecord::Schema.define(:version => 20110416100818) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(:version => 20110329085623) do
   add_index "lolita_files", ["asset_size"], :name => "index_lolita_files_on_asset_size"
   add_index "lolita_files", ["fileable_type", "fileable_id"], :name => "index_lolita_files_on_fileable_type_and_fileable_id"
   add_index "lolita_files", ["fileable_type"], :name => "index_lolita_files_on_fileable_type"
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
