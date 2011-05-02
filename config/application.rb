@@ -4,11 +4,13 @@ require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
-if Rails.env.to_sym==:development
-    # require File.expand_path("../lolita/lib/lolita")
-    # require File.expand_path("../lolita-file-upload/lib/lolita-file-upload")
-    # require File.expand_path("../lolita-report/lib/lolita-report")
-end
+#if Rails.env.to_sym==:development
+# require "ruby-debug"
+#     require File.expand_path("../lolita/lib/lolita")
+#     require File.expand_path("../lolita-file-upload/lib/lolita-file-upload")
+#     require File.expand_path("../lolita-report/lib/lolita-report")
+#     require File.expand_path("../lolita-i18n/lib/lolita-i18n")
+#end
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module LolitaActiveRecordDemo
@@ -40,7 +42,7 @@ module LolitaActiveRecordDemo
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
-
+    
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
   end

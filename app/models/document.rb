@@ -9,11 +9,11 @@ class Document < ActiveRecord::Base
     end
     report "Other report" do
       name "test1"
-      fields :title
+      column_names :title
     end
     report("My report") do
       name "test"
-      fields :title
+      column_names :title
     end
     tab(:files)
   end
