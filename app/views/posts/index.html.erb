@@ -1,4 +1,4 @@
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post_path(post) %></h2>
-  <%= raw truncate(post.body) %>
+  <%= truncate(strip_tags(post.body), :length => 100) %>
 <% end %>
