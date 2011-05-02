@@ -4,9 +4,9 @@ LolitaActiveRecordDemo::Application.routes.draw do
 
   root :to=>"home#index"
   resources :documents
-  resources :posts
+ # resources :posts
   
   lolita_for :documents
-  lolita_for :posts
+  lolita_for :posts, :controller=>"posts"
  
 end

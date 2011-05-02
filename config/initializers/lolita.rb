@@ -16,6 +16,6 @@ Lolita.setup do |config|
    config.authentication=:authenticate_user!
 end
 
-# Lolita::I18n.store=I18n::Backend::KeyValue.new(Redis.new)
-# I18n.backend = Lolita::I18n.store#I18n::Backend::Chain.new(I18n::Backend::KeyValue.new(Redis.new), I18n.backend)
-# I18n.backend.load_translations
+Lolita::I18n.store=I18n::Backend::KeyValue.new(Redis.new)
+I18n.backend = Lolita::I18n.store#I18n::Backend::Chain.new(I18n::Backend::KeyValue.new(Redis.new), I18n.backend)
+I18n.backend.load_translations
