@@ -4,8 +4,9 @@ class Document < ActiveRecord::Base
   has_many :files, :class_name=>"Lolita::Upload::File",:as=>:fileable
   validates :title, :presence=>true
   lolita do
+
     tab :content do
-      field :title, :builder=>:text
+      field :title
     end
     report "Other report" do
       name "test1"
