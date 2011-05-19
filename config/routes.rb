@@ -7,6 +7,7 @@ LolitaActiveRecordDemo::Application.routes.draw do
  # resources :posts
   
   lolita_for :documents
-  lolita_for :posts, :controller=>"posts"
- 
+
+  lolita_for :posts, :controller=>"lolita/posts"
+
 end

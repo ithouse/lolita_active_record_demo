@@ -1,12 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~>3.0.0'
+
+gem "lolita", :git => "git://github.com/ithouse/lolita.git"
+gem "lolita-report", "~> 0.1"
+gem "lolita-file-upload", "~> 0.1.2"
+
 gem "carrierwave"
 gem "kaminari"
 gem "devise"
 gem "ruport"
 gem "spreadsheet"
-gem "redis"
 
 if `whoami`.gsub(/\W/,"") == "kungs"
   gem 'lolita', :path=>File.expand_path("../../lolita",__FILE__)

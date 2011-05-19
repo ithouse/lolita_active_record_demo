@@ -1,9 +1,11 @@
-class PostsController < Lolita::RestController
- 
- before_create :set_default_params
- 
+
+class PostsController < ApplicationController
+  layout "application"
+
   def show
+    @post = Post.find_by_id(params[:id])
   end
+
 
 
 private
@@ -11,12 +13,11 @@ private
 def is_lolita_resource?
    request.env["lolita.mapping"]=Lolita.mappings[:post]  
    true 
-  end
-
-
-def set_default_params
-  debugger
-  a=1
 end
+
+  def index
+    @posts = Post.find(:all)
+
+  end
 
 end
