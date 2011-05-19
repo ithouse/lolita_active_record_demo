@@ -1,0 +1,16 @@
+ol.menu-items-tree li{
+  list-style:none;
+  width:390px;
+}
+div.menu-tree-content{
+  width:500px;
+}
+li.placeholder{
+  background-color:white;
+}
+input.url-input{
+  width:200px;
+}
+.list table tbody tr.subrow:hover{
+  background:none !important;
+}
