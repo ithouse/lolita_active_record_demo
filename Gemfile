@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '~>3.0.0'
+gem 'rake', '~>0.8.7'
 
 
 gem "carrierwave"
@@ -9,7 +10,7 @@ gem "devise"
 gem "ruport"
 gem "spreadsheet"
 
-if `whoami`.gsub(/\W/,"") == "kungs"
+if `whoami`.gsub(/\W/,"") == "rodzhers"
   gem 'lolita', :path=>File.expand_path("../../lolita",__FILE__)
   gem 'lolita-menu', :path=>File.expand_path("../../lolita-menu",__FILE__)
   gem 'lolita-file-upload', :path=>File.expand_path("../../lolita-file-upload",__FILE__)
@@ -21,6 +22,9 @@ else
   gem "lolita-file-upload", "~>0.1.2"
   gem "lolita-menu"
 end
+
+gem "compass", ">= 0.11.1"
+gem "compass-boilerplate-plugin", :require => "compass_boilerplate"
 
 gem 'sqlite3'
 
