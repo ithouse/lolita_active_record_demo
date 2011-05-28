@@ -6,6 +6,10 @@ class Lolita::PostsController < Lolita::RestController
    true 
   end
 
+  def tags
+    render :json =>  ActsAsTaggableOn::Tag.where("name like ?","%#{params[:term]}%").all.map { |x| {:id => x.name, :value => x.name}}
+  end
+
   private
 
   def set_default_params

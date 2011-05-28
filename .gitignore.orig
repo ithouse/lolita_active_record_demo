@@ -8,5 +8,8 @@ Gemfile.lock
 public/upload/
 public/lolita
 *.swp
-nbproject
+<<<<<<< HEAD
 *.css
+=======
+nbproject
+>>>>>>> 326750ee7b225bcc21c0d007dab39445e4c91b8d
