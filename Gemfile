@@ -29,3 +29,5 @@ gem 'sqlite3'
 group :development do
   gem "ruby-debug19"
 end
+
+gem 'acts-as-taggable-on'
