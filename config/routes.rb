@@ -1,5 +1,7 @@
 LolitaActiveRecordDemo::Application.routes.draw do
 
+  resources :pages
+
   resources :comments
 
   devise_for :users
@@ -13,4 +15,5 @@ LolitaActiveRecordDemo::Application.routes.draw do
 
   lolita_for :posts, :controller=>"lolita/posts"
   lolita_for :comments
+  lolita_for :pages
 end
