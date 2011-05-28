@@ -7,7 +7,7 @@ class Lolita::PostsController < Lolita::RestController
   end
 
   def tags
-    render :json => {"tag" => "cat"}
+    render :json =>  ActsAsTaggableOn::Tag.where("name like ?","%#{params[:term]}%").all.map { |x| {:id => x.name, :value => x.name}}
   end
 
   private
