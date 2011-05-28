@@ -1,0 +1,86 @@
+// Here's where we define some default constants
+@import "partials/base";
+
+// Then we'll import the compass extension
+@import "html5-boilerplate";
+
+// Now, you can simply include everything
+// (except media) by uncommeting this line
+//@include html5-boilerplate;
+
+// Or, you can pick and choose only the sections
+// you want by using the these includes
+@include html5-boilerplate-reset;
+@include html5-boilerplate-fonts;
+@include html5-boilerplate-styles;
+@include html5-boilerplate-helpers;
+
+// Or, you can import the "overrides" partial if
+// you want more control over individual mixins
+//@import "partials/overrides";
+
+// Finally, put your own styles in these partials
+// and add more as needed (i.e. forms, tables, nav)
+@import "partials/fonts";
+@import "partials/page";
+
+// Media should come last
+@import "partials/media";
+
+body {background: #DDD;}
+
+header {
+  .top {
+    height: 50px; 
+    background-color: #000;
+    line-height: 50px;
+    color: #ddd;
+    font: normal 12px;
+    @include single-box-shadow(#ccc, 0px, 0px, 1px);
+    ul {
+      overflow: hidden;
+      li {
+        list-style-type: none;
+        float: left;
+        margin-right: 20px;
+      }
+    }
+  }
+  .main {
+    margin: 30px 0;
+    overflow: hidden;
+    .kosmonaut {float: left;}
+    .slogan {
+      float: right;
+      margin-top: 30px;
+      width: 600px;
+      font: normal 32px Georgia, "Cabin Sketch";
+      color: #000;
+      @include single-text-shadow(#fff, 1px, 0, 0);
+      letter-spacing: -1px;
+    }
+  }
+}
+
+.centered {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#main {
+  height: 1000px;
+  p, ul {
+    font: normal 11px Arial;
+    color: #777;
+  }
+  h1 {
+    font: normal 24px Georgia;
+    letter-spacing: -1px;
+  }
+}
+
+
+footer {
+  height: 50px;
+  background-color: #000;
+}

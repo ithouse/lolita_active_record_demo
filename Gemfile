@@ -25,7 +25,7 @@ else
 end
 
 gem "compass", ">= 0.11.1"
-gem "compass-boilerplate-plugin", :require => "compass_boilerplate"
+gem "html5-boilerplate"
 
 gem 'sqlite3'
 
