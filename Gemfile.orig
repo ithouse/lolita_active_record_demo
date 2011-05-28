@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'rake', '~>0.8.7'
 
 gem 'rails', '~>3.0.0'
 gem 'rake', '~>0.8.7'
@@ -11,7 +12,11 @@ gem "devise"
 gem "ruport"
 gem "spreadsheet"
 
+<<<<<<< HEAD
+if `whoami`.gsub(/\W/,"") == "rodzhers"
+=======
 if File.exist?(File.expand_path("../../lolita",__FILE__))
+>>>>>>> 8c50d0cf569e8d6610a879d51c4e96772744981c
   gem 'lolita', :path=>File.expand_path("../../lolita",__FILE__)
   gem 'lolita-menu', :path=>File.expand_path("../../lolita-menu",__FILE__)
   gem 'lolita-file-upload', :path=>File.expand_path("../../lolita-file-upload",__FILE__)
