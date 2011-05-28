@@ -9,7 +9,7 @@ gem "devise"
 gem "ruport"
 gem "spreadsheet"
 
-if `whoami`.gsub(/\W/,"") == "kungs"
+if File.exist?(File.expand_path("../../lolita",__FILE__))
   gem 'lolita', :path=>File.expand_path("../../lolita",__FILE__)
   gem 'lolita-menu', :path=>File.expand_path("../../lolita-menu",__FILE__)
   gem 'lolita-file-upload', :path=>File.expand_path("../../lolita-file-upload",__FILE__)
