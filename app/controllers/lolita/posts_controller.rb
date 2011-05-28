@@ -6,6 +6,10 @@ class Lolita::PostsController < Lolita::RestController
    true 
   end
 
+  def tags
+    render :json => {"tag" => "cat"}
+  end
+
   private
 
   def set_default_params

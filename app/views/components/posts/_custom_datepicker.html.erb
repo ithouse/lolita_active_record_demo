@@ -1,0 +1,12 @@
+<% content_for :script do %>
+  <%= javascript_include_tag 'jquery-1.5.1.min.js', 'jquery-ui-1.8.13.custom.min.js' %>
+  <%= stylesheet_link_tag 'jquery-ui-1.8.13.custom.css' %>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $("#published_at_datepicker").live("focus", function(){
+        $(this).datepicker({ dateFormat: 'yy-mm-dd'});
+      })
+    });
+  </script>
+  <% end %>
+  <%= text_field resource_name, field.name, :id => "published_at_datepicker" %>
