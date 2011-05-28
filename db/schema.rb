@@ -10,6 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
+ActiveRecord::Schema.define(:version => 20110528175401) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "author"
+    t.text     "content"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 ActiveRecord::Schema.define(:version => 20110528143502) do
 
   create_table "documents", :force => true do |t|
@@ -64,6 +75,14 @@ ActiveRecord::Schema.define(:version => 20110528143502) do
   end
 
   add_index "lolita_menus", ["name"], :name => "index_lolita_menus_on_name"
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"

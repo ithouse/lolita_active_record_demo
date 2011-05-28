@@ -8,3 +8,4 @@ Gemfile.lock
 public/upload/
 public/lolita
 *.swp
+nbproject
