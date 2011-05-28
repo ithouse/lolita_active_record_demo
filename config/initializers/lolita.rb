@@ -15,7 +15,3 @@ Lolita.setup do |config|
    config.user_classes << User
    config.authentication=:authenticate_user!
 end
-
-r=Redis.new
-Lolita::I18n.store=I18n::Backend::KeyValue.new(r)
-I18n.backend = Lolita::I18n.store#I18n::Backend::Chain.new(I18n::Backend::KeyValue.new(Redis.new), I18n.backend)
