@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Lolita Demo
+    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'print.css', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    = yield :javascript
+    = csrf_meta_tag
+  %body
+    %header
+      .top Lolita Demo
+    = yield
