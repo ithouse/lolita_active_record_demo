@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110417131627) do
+ActiveRecord::Schema.define(:version => 20110519211354) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -35,6 +35,35 @@ ActiveRecord::Schema.define(:version => 20110417131627) do
   add_index "lolita_files", ["asset_size"], :name => "index_lolita_files_on_asset_size"
   add_index "lolita_files", ["fileable_type", "fileable_id"], :name => "index_lolita_files_on_fileable_type_and_fileable_id"
   add_index "lolita_files", ["fileable_type"], :name => "index_lolita_files_on_fileable_type"
+
+  create_table "lolita_menu_items", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "menu_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.integer  "parent_id"
+    t.boolean  "is_visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lolita_menu_items", ["depth"], :name => "index_lolita_menu_items_on_depth"
+  add_index "lolita_menu_items", ["is_visible"], :name => "index_lolita_menu_items_on_is_visible"
+  add_index "lolita_menu_items", ["lft", "rgt", "menu_id", "parent_id"], :name => "index_lolita_menu_items_on_lft_and_rgt_and_menu_id_and_parent_id"
+  add_index "lolita_menu_items", ["lft"], :name => "index_lolita_menu_items_on_lft"
+  add_index "lolita_menu_items", ["menu_id"], :name => "index_lolita_menu_items_on_menu_id"
+  add_index "lolita_menu_items", ["parent_id"], :name => "index_lolita_menu_items_on_parent_id"
+  add_index "lolita_menu_items", ["rgt"], :name => "index_lolita_menu_items_on_rgt"
+
+  create_table "lolita_menus", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lolita_menus", ["name"], :name => "index_lolita_menus_on_name"
 
   create_table "posts", :force => true do |t|
     t.string   "title"

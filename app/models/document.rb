@@ -17,5 +17,6 @@ class Document < ActiveRecord::Base
       column_names :title
     end
     tab(:files)
+  
   end
 end

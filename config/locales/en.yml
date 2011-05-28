@@ -4,3 +4,6 @@
 en:
   hello: "Hello world"
   "Are you sure?": "Are you sure?"
+  home:
+    index:
+      welcome: "Welcome to Lolita Active Record demo page"
