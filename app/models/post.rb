@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
   include Lolita::Configuration
 
   belongs_to :author, :class_name => "User"
+  has_many :comments
   
   lolita do
     tab "content" do
