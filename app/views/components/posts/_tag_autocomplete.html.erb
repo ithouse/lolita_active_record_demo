@@ -8,6 +8,7 @@
 			return split( term ).pop();
 		}
 
+    $("#tag_autocomplete").live("focus", function(){
 		$( "#tag_autocomplete" )
 			.bind( "keydown", function( event ) {
 				if ( event.keyCode === $.ui.keyCode.TAB &&
@@ -44,6 +45,7 @@
 					return false;
 				}
 			});
+    });
 	});
 	</script>
   <% end %>
