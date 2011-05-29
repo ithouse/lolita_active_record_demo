@@ -10,6 +10,9 @@
 
 // Or, you can pick and choose only the sections
 // you want by using the these includes
+$selected-font-color: #333;
+$selected-background-color: #eee;
+
 @include html5-boilerplate-reset;
 @include html5-boilerplate-fonts;
 @include html5-boilerplate-styles;
@@ -101,4 +104,9 @@ header {
 footer {
   height: 50px;
   background-color: #000;
+  color: #ddd;
+  font: normal 11px Arial;
+  small {
+    line-height: 50px;
+  }
 }

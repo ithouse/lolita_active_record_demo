@@ -169,21 +169,21 @@ button::-moz-focus-inner {
 
 /* line 99, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::-moz-selection {
-  background: #ff5e99;
-  color: white;
+  background: #eeeeee;
+  color: #333333;
   text-shadow: none;
 }
 
 /* line 100, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 ::selection {
-  background: #ff5e99;
-  color: white;
+  background: #eeeeee;
+  color: #333333;
   text-shadow: none;
 }
 
 /* line 105, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
 a:link {
-  -webkit-tap-highlight-color: #ff5e99;
+  -webkit-tap-highlight-color: #eeeeee;
 }
 
 /* line 118, ../../../../.rvm/gems/ruby-1.9.2-p180/gems/html5-boilerplate-1.0.0/stylesheets/html5-boilerplate/_styles.scss */
@@ -372,23 +372,23 @@ input:invalid, textarea:invalid {
     page-break-after: avoid;
   }
 }
-/* line 30, ../../app/stylesheets/style.scss */
+/* line 33, ../../app/stylesheets/style.scss */
 body {
   background: #DDD;
 }
 
-/* line 31, ../../app/stylesheets/style.scss */
+/* line 34, ../../app/stylesheets/style.scss */
 p {
   font: normal 14px/1.5 Arial;
   color: #777;
 }
 
-/* line 35, ../../app/stylesheets/style.scss */
+/* line 38, ../../app/stylesheets/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 38, ../../app/stylesheets/style.scss */
+/* line 41, ../../app/stylesheets/style.scss */
 header .top {
   height: 50px;
   background-color: #000;
@@ -400,26 +400,26 @@ header .top {
   -o-box-shadow: 0px 0px 1px #cccccc;
   box-shadow: 0px 0px 1px #cccccc;
 }
-/* line 45, ../../app/stylesheets/style.scss */
+/* line 48, ../../app/stylesheets/style.scss */
 header .top ul {
   overflow: hidden;
 }
-/* line 47, ../../app/stylesheets/style.scss */
+/* line 50, ../../app/stylesheets/style.scss */
 header .top ul li {
   list-style-type: none;
   float: left;
   margin-right: 20px;
 }
-/* line 54, ../../app/stylesheets/style.scss */
+/* line 57, ../../app/stylesheets/style.scss */
 header .main {
   margin: 30px 0;
   overflow: hidden;
 }
-/* line 57, ../../app/stylesheets/style.scss */
+/* line 60, ../../app/stylesheets/style.scss */
 header .main .kosmonaut {
   float: left;
 }
-/* line 58, ../../app/stylesheets/style.scss */
+/* line 61, ../../app/stylesheets/style.scss */
 header .main .slogan {
   float: right;
   margin-top: 30px;
@@ -430,42 +430,48 @@ header .main .slogan {
   letter-spacing: -1px;
 }
 
-/* line 70, ../../app/stylesheets/style.scss */
+/* line 73, ../../app/stylesheets/style.scss */
 .centered {
   width: 960px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* line 77, ../../app/stylesheets/style.scss */
+/* line 80, ../../app/stylesheets/style.scss */
 #main h1 {
   margin-bottom: 20px;
   font: bold 24px Arial;
   letter-spacing: -1px;
 }
-/* line 82, ../../app/stylesheets/style.scss */
+/* line 85, ../../app/stylesheets/style.scss */
 #main h2 {
   margin: 10px 0;
   font: bold 20px Arial;
   letter-spacing: -0.5px;
 }
-/* line 87, ../../app/stylesheets/style.scss */
+/* line 90, ../../app/stylesheets/style.scss */
 #main .two-columns {
   margin: 30px 0;
 }
-/* line 90, ../../app/stylesheets/style.scss */
+/* line 93, ../../app/stylesheets/style.scss */
 #main .left {
   float: left;
   width: 49%;
 }
-/* line 94, ../../app/stylesheets/style.scss */
+/* line 97, ../../app/stylesheets/style.scss */
 #main .right {
   float: right;
   width: 49%;
 }
 
-/* line 101, ../../app/stylesheets/style.scss */
+/* line 104, ../../app/stylesheets/style.scss */
 footer {
   height: 50px;
   background-color: #000;
+  color: #ddd;
+  font: normal 11px Arial;
+}
+/* line 109, ../../app/stylesheets/style.scss */
+footer small {
+  line-height: 50px;
 }

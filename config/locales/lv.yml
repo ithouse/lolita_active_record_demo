@@ -1,3 +1,17 @@
 lv:
   hello: ""
   deadline: Beigu termiņš
+  home:
+    index:
+      welcome: "Welcome to Lolita Active Record demo page"
+      top:
+        title: "CosmoTrip"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus tellus id diam commodo convallis. Curabitur eu urna nunc, eu convallis magna. Ut facilisis adipiscing velit a molestie. Integer suscipit feugiat quam, blandit sodales leo ultrices ac. Fusce ligula dui, ultricies a congue a, pellentesque vel velit. Sed egestas dui nec nisl volutpat quis tincidunt nulla posuere. Vestibulum a pellentesque mi. Etiam dictum sapien at felis convallis tincidunt. Duis ornare, neque et porta viverra, lacus neque fermentum velit, nec scelerisque libero erat a elit. Sed congue, dolor nec laoreet pulvinar, enim ligula egestas lectus, id vehicula purus velit vel elit. Donec tempor venenatis nulla nec ullamcorper. Nunc volutpat adipiscing accumsan. Nullam in justo justo, non fringilla est. Nam eu tortor eget urna tristique semper."
+      two-columns:
+        left:
+          top: "Title"
+          text: "text"
+        right:
+          top: "title"
+          text: "text"
+
