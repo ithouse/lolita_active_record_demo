@@ -11,18 +11,23 @@ gem "devise"
 gem "ruport"
 gem "spreadsheet"
 
-if File.exist?(File.expand_path("../../lolita",__FILE__))
-  gem 'lolita', :path=>File.expand_path("../../lolita",__FILE__)
-  gem 'lolita-menu', :path=>File.expand_path("../../lolita-menu",__FILE__)
-  gem 'lolita-file-upload', :path=>File.expand_path("../../lolita-file-upload",__FILE__)
-  gem 'lolita-report', :path=>File.expand_path("../../lolita-report",__FILE__)
-  gem 'lolita-i18n', :path=>File.expand_path("../../lolita-i18n",__FILE__)
-else
-  gem "lolita", "~> 3.1.6"
-  gem "lolita-report", "~>0.1.0"
-  gem "lolita-file-upload", "~>0.1.2"
-  gem "lolita-menu"
+def dev_path gem_name
+  File.expand_path("../../#{gem_name}",__FILE__)
 end
+
+def fallback_req gem_name, *args
+  if File.exists?(dev_path(gem_name))
+    gem gem_name, :path => dev_path(gem_name) 
+  else
+    gem gem_name, *args
+  end
+end
+
+fallback_req "lolita", "~>3.1.6"
+fallback_req "lolita-menu"
+fallback_req "lolita-file-upload", "~>0.1.2"
+fallback_req "lolita-report", "~>0.1.0"
+fallback_req "lolita-i18n" if File.exist? dev_path("lolita-i18n")
 
 gem "compass", ">= 0.11.1"
 gem "html5-boilerplate"
