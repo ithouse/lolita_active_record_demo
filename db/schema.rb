@@ -10,7 +10,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
 ActiveRecord::Schema.define(:version => 20110528175401) do
 
   create_table "comments", :force => true do |t|
@@ -20,8 +19,6 @@ ActiveRecord::Schema.define(:version => 20110528175401) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-ActiveRecord::Schema.define(:version => 20110528143502) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
