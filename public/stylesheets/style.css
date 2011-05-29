@@ -377,7 +377,18 @@ body {
   background: #DDD;
 }
 
-/* line 33, ../../app/stylesheets/style.scss */
+/* line 31, ../../app/stylesheets/style.scss */
+p {
+  font: normal 14px/1.5 Arial;
+  color: #777;
+}
+
+/* line 35, ../../app/stylesheets/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 38, ../../app/stylesheets/style.scss */
 header .top {
   height: 50px;
   background-color: #000;
@@ -389,26 +400,26 @@ header .top {
   -o-box-shadow: 0px 0px 1px #cccccc;
   box-shadow: 0px 0px 1px #cccccc;
 }
-/* line 40, ../../app/stylesheets/style.scss */
+/* line 45, ../../app/stylesheets/style.scss */
 header .top ul {
   overflow: hidden;
 }
-/* line 42, ../../app/stylesheets/style.scss */
+/* line 47, ../../app/stylesheets/style.scss */
 header .top ul li {
   list-style-type: none;
   float: left;
   margin-right: 20px;
 }
-/* line 49, ../../app/stylesheets/style.scss */
+/* line 54, ../../app/stylesheets/style.scss */
 header .main {
   margin: 30px 0;
   overflow: hidden;
 }
-/* line 52, ../../app/stylesheets/style.scss */
+/* line 57, ../../app/stylesheets/style.scss */
 header .main .kosmonaut {
   float: left;
 }
-/* line 53, ../../app/stylesheets/style.scss */
+/* line 58, ../../app/stylesheets/style.scss */
 header .main .slogan {
   float: right;
   margin-top: 30px;
@@ -419,28 +430,41 @@ header .main .slogan {
   letter-spacing: -1px;
 }
 
-/* line 65, ../../app/stylesheets/style.scss */
+/* line 70, ../../app/stylesheets/style.scss */
 .centered {
   width: 960px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-/* line 70, ../../app/stylesheets/style.scss */
-#main {
-  height: 1000px;
-}
-/* line 72, ../../app/stylesheets/style.scss */
-#main p, #main ul {
-  font: normal 11px Arial;
-  color: #777;
-}
-/* line 76, ../../app/stylesheets/style.scss */
+/* line 77, ../../app/stylesheets/style.scss */
 #main h1 {
-  font: normal 24px Georgia;
+  margin-bottom: 20px;
+  font: bold 24px Arial;
   letter-spacing: -1px;
 }
+/* line 82, ../../app/stylesheets/style.scss */
+#main h2 {
+  margin: 10px 0;
+  font: bold 20px Arial;
+  letter-spacing: -0.5px;
+}
+/* line 87, ../../app/stylesheets/style.scss */
+#main .two-columns {
+  margin: 30px 0;
+}
+/* line 90, ../../app/stylesheets/style.scss */
+#main .left {
+  float: left;
+  width: 49%;
+}
+/* line 94, ../../app/stylesheets/style.scss */
+#main .right {
+  float: right;
+  width: 49%;
+}
 
-/* line 83, ../../app/stylesheets/style.scss */
+/* line 101, ../../app/stylesheets/style.scss */
 footer {
   height: 50px;
   background-color: #000;
