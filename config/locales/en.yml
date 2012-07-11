@@ -11,6 +11,9 @@ en:
       text_page:
         one: Text Page
         other: Text Pages
+      message:
+        one: Message
+        other: Messages  
     attributes:
       admin:
         email: Email
@@ -20,3 +23,8 @@ en:
         content: Content
         title: Title
         files: Files
+      message:
+        content: Content
+        title: Title
+        publication_date: Publication Date
+        draft: Draft  
