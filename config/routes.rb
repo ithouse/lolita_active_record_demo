@@ -1,13 +1,5 @@
 LolitaActiveRecordDemo::Application.routes.draw do
-
-  devise_for :users
-
-  root :to=>"home#index"
-  resources :documents
- # resources :posts
+  devise_for :admins
   
-  lolita_for :documents
-
-  lolita_for :posts, :controller=>"lolita/posts"
-
+  lolita_for :text_pages
 end

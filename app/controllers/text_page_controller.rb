@@ -1,0 +1,2 @@
+class TextPageController < ApplicationController
+end

@@ -6,3 +6,7 @@ public/uploads/
 Gemfile.lock
 public/upload/
 public/lolita
+*~
+*swp
+.rvmrc
+
