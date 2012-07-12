@@ -9,4 +9,6 @@ public/lolita
 *~
 *swp
 .rvmrc
+coverage.data
+coverage/
 
