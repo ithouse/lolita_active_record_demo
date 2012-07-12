@@ -13,7 +13,10 @@ en:
         other: Text Pages
       message:
         one: Message
-        other: Messages  
+        other: Messages
+      menu:
+        one: Menu
+        other: Menus    
     attributes:
       admin:
         email: Email
@@ -27,4 +30,6 @@ en:
         content: Content
         title: Title
         publication_date: Publication Date
-        draft: Draft 
+        draft: Draft
+       
+

@@ -5,6 +5,11 @@ gem 'rails', '3.2.6'
 gem "lolita", :git => "git://github.com/ithouse/lolita.git", :ref => "817876689c3fadedea3adb405cf4ba6384b0bb4f"
 gem "lolita-file-upload", :git => "git://github.com/ithouse/lolita-file-upload.git", :ref => "fff16df659a0c3d8136dbf51556ecc2b24231c2d"
 
+if false && File.exist?(File.expand_path("../lolita-menu"))
+  gem 'lolita-menu', :path=>File.expand_path("../../lolita-menu",__FILE__)
+else
+  gem 'lolita-menu', :git => "git://github.com/ithouse/lolita-menu.git", :ref => "97f6da36ce4240"
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
