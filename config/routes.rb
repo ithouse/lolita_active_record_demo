@@ -5,5 +5,5 @@ LolitaActiveRecordDemo::Application.routes.draw do
 
   lolita_for :messages
 
-  resources :messages
+  resources :messages, :path => 'news'
 end
