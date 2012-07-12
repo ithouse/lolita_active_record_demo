@@ -44,3 +44,13 @@ gem 'jquery-rails', '2.0.1'
 
 # To use debugger
 # gem 'debugger'
+
+group :test do 
+  gem 'cover_me', '~> 1.2.0'
+  gem 'rspec-rails', '~> 2.11.0'
+  gem 'capybara', '~> 1.1.2'
+  gem 'capybara-webkit', '~> 0.12.1'
+  gem 'fabrication', '~> 2.1.0'
+  gem 'ffaker', '~> 1.15.0'
+  gem 'database_cleaner', '~> 0.8.0'
+end
