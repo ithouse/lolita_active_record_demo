@@ -11,9 +11,9 @@ en:
       text_page:
         one: Text Page
         other: Text Pages
-      message:
-        one: Message
-        other: Messages
+      article:
+        one: Article
+        other: Articles
       menu:
         one: Menu
         other: Menus
@@ -29,11 +29,11 @@ en:
         content: Content
         title: Title
         files: Files
-      message:
+      article:
         content: Content
         title: Title
         publication_date: Publication Date
-        draft: Draft
+        draft: Save as draft
       slider:
         description: Description  
        
