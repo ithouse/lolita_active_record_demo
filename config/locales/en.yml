@@ -37,4 +37,9 @@ en:
       slider:
         description: Description  
        
+  home:
+    index:
+      sign in hint: 'Sign in user: lolita@ithouse.lv password: lolita'
+      sign in: Sign in
+
 
