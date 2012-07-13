@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712130808) do
+ActiveRecord::Schema.define(:version => 20120713083231) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -116,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20120712130808) do
   create_table "sliders", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "title"
   end
 
   create_table "text_pages", :force => true do |t|
@@ -123,6 +124,9 @@ ActiveRecord::Schema.define(:version => 20120712130808) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "text_pages", ["slug"], :name => "index_text_pages_on_slug"
 
 end

@@ -1,15 +1,19 @@
 class Slider < ActiveRecord::Base
-	include Lolita::Configuration
+  include Lolita::Configuration
 
-	has_many :pictures, :as => :fileable, :class_name => "SliderPicture", :dependant => :destroy
+  has_many :pictures, :as => :fileable, :class_name => "SliderPicture", :dependent => :destroy
   
   lolita do
-  	list do
-  		column :title
-  	end
+    list do
+      column :title
+    end
 
-  	tab :files do
-      title Proc.new{ News.human_attribute_name(:title_picture) }
+    tab :content do
+      field :title
+    end
+
+    tab :files do
+      title Slider.human_attribute_name(:pictures)
       association :pictures
     end
   end
