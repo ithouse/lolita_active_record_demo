@@ -16,7 +16,10 @@ en:
         other: Messages
       menu:
         one: Menu
-        other: Menus    
+        other: Menus
+      slider:
+        one: Slider
+        other: Slider      
     attributes:
       admin:
         email: Email
@@ -31,5 +34,7 @@ en:
         title: Title
         publication_date: Publication Date
         draft: Draft
+      slider:
+        description: Description  
        
 

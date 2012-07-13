@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712091116) do
+ActiveRecord::Schema.define(:version => 20120712130808) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -98,6 +98,25 @@ ActiveRecord::Schema.define(:version => 20120712091116) do
   end
 
   add_index "messages", ["slug"], :name => "index_messages_on_slug"
+
+  create_table "pictures", :force => true do |t|
+    t.string   "asset"
+    t.string   "name"
+    t.integer  "fileable_id"
+    t.string   "fileable_type"
+    t.string   "asset_extension"
+    t.integer  "asset_size"
+    t.string   "description"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "pictures", ["fileable_id"], :name => "index_pictures_on_fileable_id"
+
+  create_table "sliders", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "text_pages", :force => true do |t|
     t.string   "title"
