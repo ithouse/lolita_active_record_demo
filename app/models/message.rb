@@ -1,7 +1,7 @@
 class Message < ActiveRecord::Base
   include Lolita::Configuration
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :title, :use => :slugged
 
   attr_accessible :content, :title, :publication_date, :draft
 
