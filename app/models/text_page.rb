@@ -28,7 +28,7 @@ class TextPage < ActiveRecord::Base
     if self.new_record?
       ""
     else
-      Rails.application.routes.url_helpers.message_path(self)
+      Rails.application.routes.url_helpers.text_page_path(self)
     end
   end
 end
