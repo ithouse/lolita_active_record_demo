@@ -15,6 +15,7 @@ class Slider < ActiveRecord::Base
     tab :files do
       title Slider.human_attribute_name(:pictures)
       association :pictures
+      editable_fields :description
     end
   end
 
