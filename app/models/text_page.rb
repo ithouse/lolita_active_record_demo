@@ -17,6 +17,7 @@ class TextPage < ActiveRecord::Base
       field :title
       field :friendly_path, :string, :builder => :disabled
       field :content
+      field :draft
     end
 
     tab :files do

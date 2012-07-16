@@ -29,6 +29,7 @@ en:
         content: Content
         title: Title
         files: Files
+        draft: Save as draft
       article:
         content: Content
         title: Title
