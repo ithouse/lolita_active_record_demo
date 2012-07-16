@@ -29,3 +29,57 @@ custom.css and it will override the style in this file. You have been warned! :)
 .ajax_alert .form_input, .ajax_alert .form_textarea{border-top:1px solid #ffb628!important; margin-top:8px;}
 .error {margin-top:8px; overflow:hidden; margin-right:19px; border:1px solid red!important; }
 
+.devise {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  padding-top: 45px;
+  h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #a98cf5;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+  }
+  .box {
+    margin-left: 120px;
+  }
+  .clear {
+    clear: both;
+  }
+  form {
+    .field {
+      clear: both;
+    }
+    label {
+      font-weight: bold;
+      float: left;
+      width: 120px;
+    }
+    .box label {
+      width: auto;
+      font-weight: normal;
+    }
+    input {
+      float: left;
+      margin-bottom: 10px;
+    }
+    .button {
+      font-size: 18px;
+      color: #ffffff;
+      background: none repeat scroll 0 0 #a98cf5;
+      border: 1px solid #a98cf5;
+      height: 40px;
+      padding: 0 20px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px;
+    }
+    .checkbox {
+      margin-right: 10px;  
+    }
+  }
+}
+

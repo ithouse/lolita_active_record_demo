@@ -7,11 +7,13 @@ class TextPage < ActiveRecord::Base
 
   has_many :files, :as => :fileable, :class_name => "Lolita::Upload::File", :dependent => :destroy
   
-  validates :title, :presence=>true
+  validates :title, :content, :presence => true
 
   lolita do
     list do
-      column :title
+      search true
+      pagination_method :list
+      column :title, :sortable => true
     end
     tab :content do
       field :title
@@ -26,10 +28,18 @@ class TextPage < ActiveRecord::Base
   end
 
   def friendly_path
-    if self.new_record?
-      ""
-    else
-      Rails.application.routes.url_helpers.text_page_path(self)
+    "/#{self.slug}"
+  end
+
+  class << self
+    def list(page,per_page,options)
+      params = options[:request].query_parameters
+      order(sorting(params)).page(page).per(per_page)
+    end
+
+    def sorting(params)
+      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
     end
   end
+
 end
