@@ -1,37 +1,27 @@
 !!! 5
 %html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title
-      Lolita | Lolita demo
-    %meta{:content => "ThemeFuse", :name => "author"}/
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    = stylesheet_link_tag    "style", :media => "screen", :rel => 'stylesheet'
-    = stylesheet_link_tag    "css/color_wine"
-    = stylesheet_link_tag    "styles/default"
-    = stylesheet_link_tag    "custom"
+    %title Lolita demo
+    %meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    = favicon_link_tag "favicon.ico"
+    = stylesheet_link_tag    "application", :media => "all"
+    = yield :style
+    /[if lt IE 9]
+      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
     = javascript_include_tag "application"
-    = javascript_include_tag "jquery-1.7.2.js"
-    = javascript_include_tag "sendmail.js"
-    = javascript_include_tag "jquery-1.3.2.min.js"
-    = javascript_include_tag "tabsslider.js"
-    = javascript_include_tag "custom.js"
-    = javascript_include_tag "query.prettyPhoto.js"
-    %link{:href => "http://zebramash.com/clients/lolita/?feed=rss2", :rel => "alternate", :title => "RSS 2.0", :type => "application/rss+xml"}
-    %link{:href => "http://zebramash.com/clients/lolita/xmlrpc.php", :rel => "pingback"}
-    %meta{:content => "noindex,nofollow", :name => "robots"}
-    %meta{:content => "WordPress 3.4.1", :name => "generator"}
-    :css
-      .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}    %link{:charset => "utf-8", :href => "stylesheets/css/prettyPhoto.css", :media => "screen", :rel => "stylesheet", :title => "prettyPhoto main stylesheet", :type => "text/css"}
-    :javascript
-      var slideTimeout    = 5000;       
-      var maxslidernumber = 1;      
+    = yield :script
+    = csrf_meta_tags
+    = yield :head
   %body
     = render 'shared/header'
-    .content
-      = yield
-      .clear_container
+    = yield(:latest_project) if content_for?(:latest_project)
+    = yield(:secondary_page_bg) if content_for?(:secondary_page_bg)
+    = yield(:sec_menu) if content_for?(:sec_menu)
+    - if content_for?(:content)
+      = yield(:content)
+    - else
+      .content
+        = yield
+        .clear_container
     = render 'shared/footer'
-    %script{:charset => "utf-8", :type => "text/javascript"}
-      $(document).ready(function(){
-      $(".gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
-      });
+

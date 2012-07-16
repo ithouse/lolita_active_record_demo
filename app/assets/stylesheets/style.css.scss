@@ -18,9 +18,10 @@ custom.css and it will override the style in this file. You have been warned! :)
 */
 
 
-@import url(css/reset.css);
-@import url(css/layout.css);
-@import url(css/typo.css);
+@import "css/reset.css";
+@import "css/layout.css";
+@import "css/typo.css";
+@import "css/color_wine.css";
 
 
 /*-----------Ultimate Page Ends-------------------*/

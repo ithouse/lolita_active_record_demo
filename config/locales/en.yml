@@ -42,5 +42,13 @@ en:
     index:
       sign in hint: 'Sign in user: lolita@ithouse.lv password: lolita'
       sign in: Sign in
+  shared:
+    header:
+      About: About
+      News: News
+    footer:
+      copyright: '©  Lolita all rights reserved'
+      privacy: 'privecy statement'
+      terms: 'terms & conditions'
 
 

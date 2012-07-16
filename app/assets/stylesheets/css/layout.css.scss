@@ -35,7 +35,7 @@ textarea{
 .header{
  height: 70px;
  width: 100%;
- background: url(../images/header_bg.jpg) repeat-x;
+ background: url(image-path('header_bg.jpg')) repeat-x;
  }
  
 .header_content{
@@ -65,7 +65,7 @@ textarea{
 .sec_menu{
  height: 57px;
  width: 100%;
- background: url(../images/sec_menu_bg.jpg) repeat-x;
+ background: url(image-path('sec_menu_bg.jpg')) repeat-x;
  }
  
 .sec_menu_content{
@@ -95,7 +95,7 @@ textarea{
  
 .content_middle{
  width: 299px;
- background: url(../images/content_middle_bg.gif) top no-repeat #ffffff;
+ background: url(image-path('content_middle_bg.gif')) top no-repeat #ffffff;
  float: left;
  padding: 47px 35px 0 27px;
  min-height: 210px;
@@ -110,7 +110,7 @@ textarea{
 .footer{
  width: 100%;
  height: 85px;
- background: url(../images/footer_bg.gif) #ffffff repeat-x;
+ background: url(image-path('footer_bg.gif')) #ffffff repeat-x;
  margin-top: 39px;
  }
  
@@ -155,19 +155,19 @@ textarea{
  display: block;
  width: 14px;
  height: 13px;
- background: url(../images/home.png) no-repeat;
+ background: url(image-path('home.png')) no-repeat;
  float: left;
  }
  
 .homepage:hover{
  width: 14px;
  height: 13px;
- background: url(../images/home.png) no-repeat;
+ background: url(image-path('home.png')) no-repeat;
  background-position: 0 -13px;
  }
  
 .selected_page .homepage:hover{
- background: url(../images/home.png) no-repeat;
+ background: url(image-path('home.png')) no-repeat;
  cursor: default;
  }
  
@@ -179,13 +179,13 @@ textarea{
 .selected_left{
  width: 13px;
  height: 30px;
- background: url(../images/selected_left.png) no-repeat;
+ background: url(image-path('selected_left.png')) no-repeat;
  float: left;
  }
  
 .selected_middle{
  height: 30px;
- background: url(../images/selected_middle.jpg) repeat-x;
+ background: url(image-path('selected_middle.jpg')) repeat-x;
  float: left;
  padding: 7px 0 0 0;
  }
@@ -193,7 +193,7 @@ textarea{
 .selected_right{
  width: 13px;
  height: 30px;
- background: url(../images/selected_right.png) no-repeat;
+ background: url(image-path('selected_right.png')) no-repeat;
  float: left;
  } 
  
@@ -201,12 +201,12 @@ textarea{
  display: block;
  width: 140px;
  height: 32px;
- background: url(../images/view_project.png) no-repeat;
+ background: url(image-path('view_project.png')) no-repeat;
  margin-top: 34px;
  }
  
 .view_proiect:hover{
- background: url(../images/view_project.png) no-repeat;
+ background: url(image-path('view_project.png')) no-repeat;
  background-position: 0 -32px;
  }
  
@@ -291,13 +291,13 @@ h6.testimonial_name{
  display: block;
  width: 96px;
  height: 28px;
- background: url(../images/previous.png) no-repeat;
+ background: url(image-path('previous.png')) no-repeat;
  position: relative;
  top: -2px;
  }
  
 .previous:hover{
- background: url(../images/previous.png) no-repeat;
+ background: url(image-path('previous.png')) no-repeat;
  background-position: 0 -29px;
  }
  
@@ -305,13 +305,13 @@ h6.testimonial_name{
  display: block;
  width: 71px;
  height: 28px;
- background: url(../images/next.png) no-repeat;
+ background: url(image-path('next.png')) no-repeat;
  position: relative;
  top: -2px;
  }
  
 .next:hover{
- background: url(../images/next.png) no-repeat;
+ background: url(image-path('next.png')) no-repeat;
  background-position: 0 -29px;
  }
  
@@ -324,18 +324,18 @@ h6.testimonial_name{
  display: block;
  width: 19px;
  height: 20px;
- background: url(../images/page.png) no-repeat;
+ background: url(image-path('page.png')) no-repeat;
  }
  
 .page:hover{
- background: url(../images/page.png) no-repeat;
+ background: url(image-path('page.png')) no-repeat;
  background-position: 0 -20px; 
  }
  
 .rss{
  display: block;
  height: 15px;
- background: url(../images/rss_icon.jpg) right no-repeat;
+ background: url(image-path('rss_icon.jpg')) right no-repeat;
  width: 175px;
  padding: 9px 0 0 0;
  }
@@ -494,24 +494,24 @@ cite{
 .box_top{
  width: 322px;
  height: 5px;
- background: url(../images/third_menu_top.jpg) no-repeat;
+ background: url(image-path('third_menu_top.jpg')) no-repeat;
  }
  
 .box_middle{
  width: 322px;
- background: url(../images/third_menu_middle.jpg) repeat-y;
+ background: url(image-path('third_menu_middle.jpg')) repeat-y;
  }
  
 .box_bottom{
  width: 322px;
  height: 5px;
- background: url(../images/third_menu_bottom.jpg) no-repeat;
+ background: url(image-path('third_menu_bottom.jpg')) no-repeat;
  }
  
 .blog_categories_top, .blog_right .widget .box_top, .content_home .widget .box_top{
  width: 280px;
  height: 5px;
- background: url(../images/blog_categories_top.jpg) no-repeat;
+ background: url(image-path('blog_categories_top.jpg')) no-repeat;
  }
 .content_home .widget .box_top{
 	background:none;	
@@ -519,7 +519,7 @@ cite{
 
 .blog_categories_middle, .blog_right .widget .box_middle, .content_home .widget .box_middle{
  width: 280px;
- background: url(../images/blog_categories_middle.jpg) repeat-y;
+ background: url(image-path('blog_categories_middle.jpg')) repeat-y;
  }
  
 .content_home .widget .box_middle{
@@ -530,7 +530,7 @@ cite{
 .blog_categories_bottom, .blog_right .widget .box_bottom, .content_home .widget .box_bottom{
  width: 280px;
  height: 5px;
- background: url(../images/blog_categories_bottom.jpg) no-repeat;
+ background: url(image-path('blog_categories_bottom.jpg')) no-repeat;
  }
 .content_home .widget .box_bottom{
 	background:none;	
@@ -559,7 +559,7 @@ cite{
  width: 277px;
  height: 34px;
  padding: 0 4px 0 13px;
- background: url(../images/arrows_third_menu.png) bottom right no-repeat;
+ background: url(image-path('arrows_third_menu.png')) bottom right no-repeat;
  }
  
 .blog_categories li a, .blog_right .widget .third_menu li a, .content_home .widget .third_menu li a{
@@ -567,7 +567,7 @@ cite{
  }
  
 .third_menu li a:hover{
-  background: url(../images/arrows_third_menu.png) top right no-repeat;
+  background: url(image-path('arrows_third_menu.png')) top right no-repeat;
  }
  
 .blog_right .services_we_offer{
@@ -592,7 +592,7 @@ cite{
  display: block;
  width: 77px;
  height: 29px;
- background: url(../images/behance_header.jpg) top no-repeat;
+ background: url(image-path('behance_header.jpg')) top no-repeat;
 
  }
  
@@ -600,7 +600,7 @@ cite{
  display: block;
  width: 65px;
  height: 29px;
- background: url(../images/flickr_header.jpg) top no-repeat;
+ background: url(image-path('flickr_header.jpg')) top no-repeat;
 
  }
  
@@ -608,7 +608,7 @@ cite{
  display: block;
  width: 68px;
  height: 29px;
- background: url(../images/linkedin_header.jpg) top no-repeat;
+ background: url(image-path('linkedin_header.jpg')) top no-repeat;
 
  }
  
@@ -616,7 +616,7 @@ cite{
  display: block;
  width: 82px;
  height: 29px;
- background: url(../images/facebook_header.jpg) top no-repeat;
+ background: url(image-path('facebook_header.jpg')) top no-repeat;
 
  }
  
@@ -624,7 +624,7 @@ cite{
  display: block;
  width: 41px;
  height: 29px;
- background: url(../images/krop_header.jpg) top no-repeat;
+ background: url(image-path('krop_header.jpg')) top no-repeat;
 
  }
  
@@ -632,32 +632,32 @@ cite{
  display: block;
  width: 41px;
  height: 29px;
- background: url(../images/twitter_header.jpg) top no-repeat;
+ background: url(image-path('twitter_header.jpg')) top no-repeat;
 
  }
  
 .behance_header:hover{
- background: url(../images/behance_header.jpg) bottom no-repeat;
+ background: url(image-path('behance_header.jpg')) bottom no-repeat;
  }
  
 .flickr_header:hover{
- background: url(../images/flickr_header.jpg) bottom no-repeat;
+ background: url(image-path('flickr_header.jpg')) bottom no-repeat;
  }
  
 .linkedin_header:hover{
- background: url(../images/linkedin_header.jpg) bottom no-repeat;
+ background: url(image-path('linkedin_header.jpg')) bottom no-repeat;
  }
  
 .facebook_header:hover{
- background: url(../images/facebook_header.jpg) bottom no-repeat;
+ background: url(image-path('facebook_header.jpg')) bottom no-repeat;
  }
  
 .krop_header:hover{
- background: url(../images/krop_header.jpg) bottom no-repeat;
+ background: url(image-path('krop_header.jpg')) bottom no-repeat;
  }
  
 .twitter_header:hover{
- background: url(../images/twitter_header.jpg) bottom no-repeat;
+ background: url(image-path('twitter_header.jpg')) bottom no-repeat;
  }
  
 .social_header_links{
@@ -697,14 +697,14 @@ cite{
  }
  
 .project_title{
- background: url(../images/arrow_gray.png) right no-repeat;
+ background: url(image-path('arrow_gray.png')) right no-repeat;
  padding: 0 25px 0 0;
  display: block;
  margin: 7px 0 11px 0;
  }
  
 .project_title:hover{
- background: url(../images/arrow_blue.png) right no-repeat;
+ background: url(image-path('arrow_blue.png')) right no-repeat;
  }
  
 .project_hover{
@@ -713,7 +713,7 @@ cite{
  height: 135px;
  position: absolute;
  z-index: 10;
- background: url(../images/project_bg.png) no-repeat;
+ background: url(image-path('project_bg.png')) no-repeat;
  }
  
 .work_project  img {
@@ -721,7 +721,7 @@ cite{
 }
  
 .project_hover:hover{
- background: url(../images/project_hover.png) no-repeat;
+ background: url(image-path('project_hover.png')) no-repeat;
  }
  
 .secondary_menu{
@@ -756,13 +756,13 @@ cite{
 .sec_menu_selected_left{
  width: 18px;
  height: 32px;
- background: url(../images/sec_menu_selected_left.jpg) no-repeat;	
+ background: url(image-path('sec_menu_selected_left.jpg')) no-repeat;	
  float: left;
  }
  
 .sec_menu_selected_middle{
  height: 27px;
- background: url(../images/sec_menu_selected_middle.jpg) repeat-x;
+ background: url(image-path('sec_menu_selected_middle.jpg')) repeat-x;
  float: left;
  padding: 7px 0 0 0;	
  }
@@ -770,7 +770,7 @@ cite{
 .sec_menu_selected_right{
  width: 18px;
  height: 32px;
- background: url(../images/sec_menu_selected_right.jpg) no-repeat;	
+ background: url(image-path('sec_menu_selected_right.jpg')) no-repeat;	
  float: left;
  }
  
@@ -787,26 +787,26 @@ cite{
 .large_box_top{
  width: 784px;
  height: 10px;
- background: url(../images/large_box_top.jpg) no-repeat;
+ background: url(image-path('large_box_top.jpg')) no-repeat;
  }
  
 .large_box_middle{
  width: 629px;
- background: url(../images/large_box_middle.jpg) repeat-y;
+ background: url(image-path('large_box_middle.jpg')) repeat-y;
  padding: 7px 135px 7px 20px;
  }
  
 .large_box_bottom{
  width: 784px;
  height: 10px;
- background: url(../images/large_box_bottom.jpg) no-repeat;
+ background: url(image-path('large_box_bottom.jpg')) no-repeat;
  }
  
 .contact_for_quote{
  display: block;
  width: 149px;
  height: 149px;
- background: url(../images/contact_for_quote.png) no-repeat;
+ background: url(image-path('contact_for_quote.png')) no-repeat;
  position: absolute;
  right: -63px;
  top: -29px;
@@ -836,7 +836,7 @@ cite{
  display: block;
  width: 298px;
  height: 25px;
- background: url(../images/related_projects_bg.jpg) top no-repeat;
+ background: url(image-path('related_projects_bg.jpg')) top no-repeat;
  padding: 8px 0 0 18px;
  }
  
@@ -844,34 +844,34 @@ cite{
  display: block;
  width: 233px;
  height: 25px;
- background: url(../images/read_more_bg.jpg) top no-repeat;
+ background: url(image-path('read_more_bg.jpg')) top no-repeat;
  padding: 8px 0 0 18px;
  }
  
 .related_projects:hover{
- background: url(../images/related_projects_bg.jpg) bottom no-repeat;
+ background: url(image-path('related_projects_bg.jpg')) bottom no-repeat;
  }
  
 .read_more:hover{
- background: url(../images/read_more_bg.jpg) bottom no-repeat;
+ background: url(image-path('read_more_bg.jpg')) bottom no-repeat;
  }
  
 .contact_box_top{
  width: 922px;
  height: 10px;
- background: url(../images/contact_box_top.jpg) no-repeat;
+ background: url(image-path('contact_box_top.jpg')) no-repeat;
  }
  
 .contact_box_middle{
  width: 852px;
- background: url(../images/contact_box_middle.jpg) repeat-y;
+ background: url(image-path('contact_box_middle.jpg')) repeat-y;
  padding: 0 35px 9px 35px;
  } 
 
 .contact_box_bottom{
  width: 922px;
  height: 10px;
- background: url(../images/contact_box_bottom.jpg) no-repeat;
+ background: url(image-path('contact_box_bottom.jpg')) no-repeat;
  }
  
 .form_input, .form_textarea{
@@ -892,14 +892,14 @@ cite{
 .input_left{
  width: 14px;
  height: 33px;
- background: url(../images/input_left.jpg) no-repeat;
+ background: url(image-path('input_left.jpg')) no-repeat;
  float: left;
  }
  
 .input_middle{
  width: 377px;
  height: 19px;
- background: url(../images/input_middle.jpg) repeat-x;
+ background: url(image-path('input_middle.jpg')) repeat-x;
  float: left;
  border: none;
  padding: 7px 0 7px 0;
@@ -908,7 +908,7 @@ cite{
 .input_middle_comments{
  width: 245px;
  height: 19px;
- background: url(../images/input_middle.jpg) repeat-x;
+ background: url(image-path('input_middle.jpg')) repeat-x;
  float: left;
  border: none;
  padding: 7px 0 7px 0;
@@ -917,7 +917,7 @@ cite{
 .input_middle_blog{
  width: 230px;
  height: 19px;
- background: url(../images/input_middle.jpg) repeat-x;
+ background: url(image-path('input_middle.jpg')) repeat-x;
  float: left;
  border: none;
  padding: 7px 0 7px 0;
@@ -926,7 +926,7 @@ cite{
 .input_right{
  width: 13px;
  height: 33px;
- background: url(../images/input_right.jpg) no-repeat;
+ background: url(image-path('input_right.jpg')) no-repeat;
  float: left;
  }
  
@@ -941,14 +941,14 @@ div.odd{
 .textarea_left{
  width: 14px;
  height: 175px;
- background: url(../images/textarea_left.jpg) no-repeat;
+ background: url(image-path('textarea_left.jpg')) no-repeat;
  float: left;
  }
  
 .textarea_middle{
  width: 803px;
  height: 161px;
- background: url(../images/textarea_middle.jpg) repeat-x;
+ background: url(image-path('textarea_middle.jpg')) repeat-x;
  float: left;
  border: none;
  padding: 7px 0 7px 0;
@@ -957,7 +957,7 @@ div.odd{
 .textarea_middle_comments{
  width: 385px;
  height: 161px;
- background: url(../images/textarea_middle.jpg) repeat-x;
+ background: url(image-path('textarea_middle.jpg')) repeat-x;
  float: left;
  border: none;
  padding: 7px 0 7px 0;
@@ -966,14 +966,14 @@ div.odd{
 .textarea_right{
  width: 14px;
  height: 175px;
- background: url(../images/textarea_right.jpg) no-repeat;
+ background: url(image-path('textarea_right.jpg')) no-repeat;
  float: left;
  }
  
 input.submit{
  width: 214px;
  height: 41px;
- background: url(../images/submit_button.jpg) no-repeat;
+ background: url(image-path('submit_button.jpg')) no-repeat;
  border: none;
  margin: 14px 0 14px 0;
  }
@@ -981,7 +981,7 @@ input.submit{
 input.submit_comment{
  width: 214px;
  height: 41px;
- background: url(../images/submit_comment.jpg) no-repeat;
+ background: url(image-path('submit_comment.jpg')) no-repeat;
  border: none;
  margin: 14px 0 0 0;
  }
@@ -995,11 +995,11 @@ input.submit_comment{
  height:20px;
  display:block;
  float:left;
- background-image: url(../images/page.png)
+ background-image: url(image-path('page.png'))
 }
 
 .tabbicos a.active{
- background-image: url(../images/selected_page.png)
+ background-image: url(image-path('selected_page.png'))
 }
 
 .displaynone{
@@ -1037,7 +1037,7 @@ input.submit_comment{
  display: block;
  width: 150px;
  height: 25px;
- background: url(../images/newer_articles_bg.jpg) top no-repeat;
+ background: url(image-path('newer_articles_bg.jpg')) top no-repeat;
  padding: 8px 0 0 0;
  margin-left: 0px;
  float: left;
@@ -1050,14 +1050,14 @@ input.submit_comment{
  }
  
 .newer_articles a:hover{
- background: url(../images/newer_articles_bg.jpg) bottom no-repeat;
+ background: url(image-path('newer_articles_bg.jpg')) bottom no-repeat;
  }
  
 .older_articles a{
  display: block;
  width: 150px;
  height: 25px;
- background: url(../images/older_articles_bg.jpg) top no-repeat;
+ background: url(image-path('older_articles_bg.jpg')) top no-repeat;
  padding: 8px 0 0 0;
  float: left;
  }
@@ -1067,7 +1067,7 @@ input.submit_comment{
  }
  
 .older_articles a:hover{
- background: url(../images/older_articles_bg.jpg) bottom no-repeat;
+ background: url(image-path('older_articles_bg.jpg')) bottom no-repeat;
  }
  
 .other_articles{
@@ -1141,7 +1141,7 @@ input.submit_comment{
  width: 456px;
  }
 .children li div.comment_entry{
- background: #ffffff url(../images/reply_icon.jpg) no-repeat 4% 8%!important;
+ background: #ffffff url(image-path('reply_icon.jpg')) no-repeat 4% 8%!important;
  padding-left:60px;
 }
 
@@ -1160,19 +1160,19 @@ input.submit_comment{
 .comment_form_top{
  width: 486px;
  height: 5px;
- background: url(../images/comment_form_bg_top.jpg)  no-repeat;
+ background: url(image-path('comment_form_bg_top.jpg'))  no-repeat;
  }
  
 .comment_form_middle{
  width: 416px;
- background: url(../images/comment_form_bg_middle.jpg) repeat-y;
+ background: url(image-path('comment_form_bg_middle.jpg')) repeat-y;
  padding: 15px 35px 15px 35px;
  }
  
 .comment_form_bottom{
  width: 486px;
  height: 5px;
- background: url(../images/comment_form_bg_bottom.jpg)  no-repeat;
+ background: url(image-path('comment_form_bg_bottom.jpg'))  no-repeat;
  }
  
 .comments_form_input{

@@ -1,12 +1,10 @@
 .footer
   .footer_content
     .footer_left
-      %p ©  Lolita   |    all rights reserved
-    / .footer_left
+      %p= t('.copyright')
     .footer_right
       %p
-        %a{:href => "#"}> privecy statement
-        \   |   
-        %a{:href => "#"} terms & conditions
-    / .footer_right
-  / .footer_content
+        = link_to t('.privacy'), "#"
+        = ' | '  
+        = link_to t('.terms'), "#"
+
