@@ -13,7 +13,7 @@ describe TextPage do
 
   it "should have full fiendly path" do
     text_page = Fabricate(:text_page ,:title => "Test", :content => "pam pa ram")
-    text_page.friendly_path.should == "/text_pages/#{text_page.slug}"
+    text_page.friendly_path.should == "/#{text_page.slug}"
   end
 
 end

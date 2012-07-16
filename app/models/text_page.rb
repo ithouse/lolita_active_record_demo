@@ -7,7 +7,7 @@ class TextPage < ActiveRecord::Base
 
   has_many :files, :as => :fileable, :class_name => "Lolita::Upload::File", :dependent => :destroy
   
-  validates :title, :content, :presence=>true
+  validates :title, :content, :presence => true
 
   lolita do
     list do
@@ -28,11 +28,7 @@ class TextPage < ActiveRecord::Base
   end
 
   def friendly_path
-    if self.new_record?
-      ""
-    else
-      Rails.application.routes.url_helpers.text_page_path(self)
-    end
+    "/#{self.slug}"
   end
 
   class << self
