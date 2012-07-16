@@ -1,0 +1,7 @@
+.blog_left.gallery
+  %h1
+    = link_to article.title, article_path(article)
+  %p.subtitle
+    = article.publication_date.strftime("%A, %B %d %Y")
+  %p
+    = truncate(article.content, :length => 255, :separator => '...').html_safe

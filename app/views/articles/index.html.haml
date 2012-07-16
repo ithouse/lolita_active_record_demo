@@ -1,0 +1,33 @@
+- content_for :latest_project do
+  = render'articles/latest_project'
+- content_for :sec_menu do
+  = render 'articles/sec_menu'      
+- content_for :content do
+  .content
+    .secondary_pages_content
+      .blog_left
+        %h1
+          = link_to 'News', articles_path
+        %br
+        %p 
+          - @articles.each do |article|
+            = render :partial => 'article', :locals => {:article => article} 
+            %br
+        = will_paginate @articles, :class => 'article_list_pagination'     
+      .blog_right
+        #testimonials_manager_widget-3.widget.ww1231
+          .services_we_offer
+            %img.newspaper_icon.png{:alt => "Testimonials", :src => "http://zebramash.com/clients/lolita/wp-content/uploads/2012/07/testimonials.png"}
+            %h5 Testimonials
+            .box
+              .box_top
+              .box_middle
+                .testimonials
+                  %img.cite_icon.png{:alt => "Citation", :height => "19", :src => "http://zebramash.com/clients/lolita/wp-content/themes/creativejuice_3.0/images/cite_icon.png", :width => "21"}
+                  %cite Bonbon tiramisu cake. Faworki topping faworki cake danish. Fruitcake sweet marshmallow. Bear claw faworki chupa chups croissant apple pie faworki oat cake sugar plum oat cake.
+                  %h6.testimonial_name Martins
+                  .clear_container
+              .box_bottom
+          .clear_container
+        .clear_container
+    .clear_container
