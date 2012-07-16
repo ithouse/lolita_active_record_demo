@@ -7,7 +7,7 @@ class TextPage < ActiveRecord::Base
 
   has_many :files, :as => :fileable, :class_name => "Lolita::Upload::File", :dependent => :destroy
   
-  validates :title, :presence=>true
+  validates :title, :content, :presence=>true
 
   lolita do
     list do
