@@ -11,7 +11,9 @@ class TextPage < ActiveRecord::Base
 
   lolita do
     list do
-      column :title
+      search true
+      pagination_method :list
+      column :title, :sortable => true
     end
     tab :content do
       field :title
@@ -32,4 +34,16 @@ class TextPage < ActiveRecord::Base
       Rails.application.routes.url_helpers.text_page_path(self)
     end
   end
+
+  class << self
+    def list(page,per_page,options)
+      params = options[:request].query_parameters
+      order(sorting(params)).page(page).per(per_page)
+    end
+
+    def sorting(params)
+      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
+    end
+  end
+
 end
