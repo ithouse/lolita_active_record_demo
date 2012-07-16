@@ -18,7 +18,7 @@ end
 gem 'sqlite3'
 gem 'devise', '~> 2.1.2'
 gem 'carrierwave', '~> 0.5.8'
-
+gem "haml"
 gem "friendly_id", "~> 4.0.1"
 
 # Gems used only for assets and not required

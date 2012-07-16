@@ -2,7 +2,7 @@ class Slider < ActiveRecord::Base
   include Lolita::Configuration
 
   has_many :pictures, :as => :fileable, :class_name => "SliderPicture", :dependent => :destroy
-  
+  attr_accessible :title, :description
   lolita do
     list do
       column :title
