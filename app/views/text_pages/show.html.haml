@@ -1,0 +1,14 @@
+- content_for :latest_project do
+  = render'shared/latest_project'
+- content_for :sec_menu do
+  = render 'shared/sec_menu'
+.secondary_pages_content
+  .blog_left.gallery
+    %h1
+      = link_to @text_page.title, text_page_path(:slug => @text_page.slug)
+    %p.subtitle
+      = l(@text_page.updated_at, :format => :long)
+    %p
+      = @text_page.content.html_safe
+  = render 'shared/blog_right'
+.clear_container 

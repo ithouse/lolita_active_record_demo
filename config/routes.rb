@@ -9,7 +9,7 @@ LolitaActiveRecordDemo::Application.routes.draw do
   lolita_for :admins
 
   resources :articles, :path => 'articles'
-  match ':slug' => 'text_pages#show', :via => :get, :constraints => lambda{|request|
+  match ':slug' => 'text_pages#show', :as => 'text_page', :via => :get, :constraints => lambda{|request|
     request.params[:slug].to_s != "lolita"
   }
   
