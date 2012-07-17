@@ -13,6 +13,7 @@
           - @articles.each do |article|
             = render :partial => 'article', :locals => {:article => article} 
             %br
+         
         = paginate @articles     
       .blog_right
         = render :partial => 'shared/testimonials'

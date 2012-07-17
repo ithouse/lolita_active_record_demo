@@ -14,6 +14,16 @@
  background: url(image-path('category_illustration_bg.jpg')) no-repeat;
  }
 
-.article_list_pagination a:hover{
+nav.pagination a:hover{
   color: #6e48cb;
+}
+
+nav{display: block;}
+nav.pagination{
+  
+  clear: both;
+}
+span.page{
+  background: none;
+  display: inline;
 }
