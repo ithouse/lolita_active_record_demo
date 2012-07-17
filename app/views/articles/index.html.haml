@@ -13,7 +13,7 @@
           - @articles.each do |article|
             = render :partial => 'article', :locals => {:article => article} 
             %br
-        = will_paginate @articles, :class => 'article_list_pagination'     
+        = paginate @articles     
       .blog_right
         #testimonials_manager_widget-3.widget.ww1231
           .services_we_offer

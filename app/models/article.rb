@@ -2,6 +2,8 @@ class Article < ActiveRecord::Base
   include Lolita::Configuration
   extend FriendlyId
   self.table_name = 'messages'
+  PER_PAGE = 5
+
   friendly_id :title, :use => :slugged
 
   attr_accessible :content, :title, :publication_date, :draft
@@ -15,7 +17,9 @@ class Article < ActiveRecord::Base
 
   lolita do
     list  do
-      column :title
+      search true
+      pagination_method :list
+      column :title, :sortable => true
     end
 
     tab :content do
@@ -38,4 +42,16 @@ class Article < ActiveRecord::Base
       Rails.application.routes.url_helpers.article_path(self)
     end
   end
+
+  class << self
+    def list(page,per_page,options)
+      params = options[:request].query_parameters
+      order(sorting(params)).page(page).per(per_page)
+    end
+
+    def sorting(params)
+      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
+    end
+  end
+  
 end
