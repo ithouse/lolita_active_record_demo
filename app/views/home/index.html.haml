@@ -1,3 +1,5 @@
+= javascript_include_tag "tabsslider.js"
+
 - content_for :latest_project do
   .latest_project
     .project
@@ -11,17 +13,20 @@
             %h1 Cupcake
             %p Cupcake ipsum dolor sit amet gummi bears oat cake. Candy pie chupa chups sweet. Liquorice tiramisu danish dragée. Sweet roll lollipop powder chocolate cake gummi bears jelly-o ice cream. Danish lollipop sweet roll liquorice. Chocolate cake caramels pie fruitcake sesame snaps danish pie.
 - content_for :sec_menu do
+  :javascript
+    var slideTimeout = 5000;   
+    var maxslidernumber = 1;
   .sec_menu
     .sec_menu_content
       .previous_button
-        %a.previous{:href => "javascript:void(0);", :onclick => "prevSlide();"}
+        = link_to '', 'javascript:void(0);', :onclick => 'prevSlide();', :class => 'previous'
       .tabbicos.float_left
         %ul.project_bubles
           %li
             %a#slide-tab1.active{:href => "javascript:void(0);", :onclick => "changeSlide2this(1);"}  
         %div{:style => "clear:both;"}
       .next_button{:style => "width:71px"}
-        %a.next{:href => "javascript:void(0);", :onclick => "nextSlide();"}
+        = link_to '', 'javascript:void(0);', :onclick => 'nextSlide();', :class => 'next'
       .clear_container     
 - content_for :content do
   .content_home
@@ -34,7 +39,21 @@
             %li
               = link_to article.title.capitalize, article_path(article)  
     .content_middle
-      = render :partial => 'shared/testimonials'
+      #testimonials_manager_widget-2.panel.widget.ww1231
+        .services_we_offer
+          = image_tag 'testimonials.png', :class => 'newspaper_icon png'
+          %h5 Testimonials
+          .box
+            .box_top
+              .box_middle
+                .testimonials
+                  = image_tag 'cite_icon.png', :height => 19, :width => 21, :class => 'cite_icon png'
+                  %cite Bonbon tiramisu cake. Faworki topping faworki cake danish. Fruitcake sweet marshmallow. Bear claw faworki chupa chups croissant apple pie faworki oat cake sugar plum oat cake.
+                  %h6.testimonial_name Martins
+                  .clear_container
+            .box_bottom
+        .clear_container
+      .content_right
     .content_right
       #text-3.panel.plast.widget.widget_text
         %h2= t('.sign in hint')
@@ -43,7 +62,8 @@
           = link_to t('.sign in'), '/lolita'
     .clear_container
 
-%script{:charset => "utf-8", :type => "text/javascript"}
+:javascript
   $(document).ready(function(){
   $(".gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
   });
+
