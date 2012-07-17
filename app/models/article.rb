@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
   extend FriendlyId
   self.table_name = 'messages'
   PER_PAGE = 5
+  SHOW_IN_HOME_PAGE = 3
 
   friendly_id :title, :use => :slugged
 

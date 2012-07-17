@@ -9,7 +9,7 @@
     %h1
       = link_to t('.News'), articles_path
     %br
-    %p 
+    %ul.news_list 
       - @articles.each do |article|
         = render :partial => 'article', :locals => {:article => article} 
         %br
