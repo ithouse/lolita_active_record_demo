@@ -47,7 +47,7 @@ describe TextPage, :request => true do
       page.find('.blog_left.gallery p a')[:href].should == pdf_file.asset.url
     end
 
-    it "can donload link of pdf in the content of text page" do
+    it "can download link of pdf in the content of text page" do
       text_page.files << pdf_file
       text_page.content = "<a href=\"#{pdf_file.asset.url}\">pdf</a>"
       text_page.save
