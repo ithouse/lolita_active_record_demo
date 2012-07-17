@@ -32,7 +32,7 @@
         %ul
           - @articles.each do |article|
             %li
-              = link_to(article.title.capitalize)  
+              = link_to article.title.capitalize, article_path(article)  
     .content_middle
       = render :partial => 'shared/testimonials'
     .content_right
