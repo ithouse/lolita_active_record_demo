@@ -2,6 +2,8 @@ class Article < ActiveRecord::Base
   include Lolita::Configuration
   extend FriendlyId
   self.table_name = 'messages'
+  PER_PAGE = 5
+
   friendly_id :title, :use => :slugged
 
   attr_accessible :content, :title, :publication_date, :draft
@@ -10,10 +12,13 @@ class Article < ActiveRecord::Base
 
   validates :content, :publication_date, :title, :presence => true
 
-  scope :by_newest, :order => 'publication_date DESC'
+  scope :latest, :order => 'publication_date DESC'
+  scope :published, where(:draft => false)
 
   lolita do
     list  do
+      search true
+      pagination_method :list
       column :title
     end
 
@@ -38,7 +43,15 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.published
-    Article.where(:draft => false).by_newest
+  class << self
+    def list(page,per_page,options)
+      params = options[:request].query_parameters
+      order(sorting(params)).page(page).per(per_page)
+    end
+
+    def sorting(params)
+      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
+    end
   end
+
 end
