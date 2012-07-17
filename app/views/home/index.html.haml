@@ -1,3 +1,49 @@
-= t('.sign in hint')
-%br
-= link_to t('.sign in'), '/lolita'
+- content_for :latest_project do
+  .latest_project
+    .project
+      #slide1.tabb.displayslide
+        .project_table
+          .project_screens.right
+            .phones.parallax
+              %div
+                = image_tag "cupcake3.png", :alt => "Cupcake"
+          .project_text_right
+            %h1 Cupcake
+            %p Cupcake ipsum dolor sit amet gummi bears oat cake. Candy pie chupa chups sweet. Liquorice tiramisu danish dragée. Sweet roll lollipop powder chocolate cake gummi bears jelly-o ice cream. Danish lollipop sweet roll liquorice. Chocolate cake caramels pie fruitcake sesame snaps danish pie.
+- content_for :sec_menu do
+  .sec_menu
+    .sec_menu_content
+      .previous_button
+        %a.previous{:href => "javascript:void(0);", :onclick => "prevSlide();"}
+      .tabbicos.float_left
+        %ul.project_bubles
+          %li
+            %a#slide-tab1.active{:href => "javascript:void(0);", :onclick => "changeSlide2this(1);"}  
+        %div{:style => "clear:both;"}
+      .next_button{:style => "width:71px"}
+        %a.next{:href => "javascript:void(0);", :onclick => "nextSlide();"}
+      .clear_container     
+- content_for :content do
+  .content_home
+    .content_left
+      #recent-posts-4.panel.widget.widget_recent_entries
+        %h2= t('.News')
+        .line
+        %ul
+          - @articles.each do |article|
+            %li
+              = link_to(article.title.capitalize)  
+    .content_middle
+      = render :partial => 'shared/testimonials'
+    .content_right
+      #text-3.panel.plast.widget.widget_text
+        %h2= t('.sign in hint')
+        .line
+        .textwidget
+          = link_to t('.sign in'), '/lolita'
+    .clear_container
+
+%script{:charset => "utf-8", :type => "text/javascript"}
+  $(document).ready(function(){
+  $(".gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
+  });

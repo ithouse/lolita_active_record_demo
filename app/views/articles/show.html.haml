@@ -1,35 +1,18 @@
 - content_for :latest_project do
   = render'articles/latest_project'
+  
 - content_for :sec_menu do
   = render 'articles/sec_menu'
-- content_for :content do
-  .content
-    .secondary_pages_content
-      .blog_left.gallery
-        %h1
-          = link_to @article.title, article_path(@article)
-        %p.subtitle
-          = @article.publication_date.strftime("%A, %B %d %Y")
-        %p
-          = @article.content.html_safe
-        .comments
-          %a.add_a_comment{:href => "http://zebramash.com/clients/lolita/?p=39#comments"} Add a comment
-          .clear_container
-      .blog_right
-        #testimonials_manager_widget-4.widget.ww1231
-          .services_we_offer
-            %img.newspaper_icon.png{:alt => "Testimonials", :src => "http://zebramash.com/clients/lolita/wp-content/uploads/2012/07/testimonials.png"}
-            %h5 Testimonials
-            .box
-              .box_top
-              .box_middle
-                .testimonials
-                  %img.cite_icon.png{:alt => "Citation", :height => "19", :src => "http://zebramash.com/clients/lolita/wp-content/themes/creativejuice_3.0/images/cite_icon.png", :width => "21"}
-                  %cite Bonbon tiramisu cake. Faworki topping faworki cake danish. Fruitcake sweet marshmallow. Bear claw faworki chupa chups croissant apple pie faworki oat cake sugar plum oat cake.
-                  %h6.testimonial_name Martins
-                  .clear_container
-              .box_bottom
-          .clear_container
-        .clear_container
-    .clear_container 
+
+.secondary_pages_content
+  .blog_left.gallery
+    %h1
+      = link_to @article.title, article_path(@article)
+    %p.subtitle
+      = l(@article.publication_date, :format => :long)
+    %p
+      = @article.content.html_safe
+  .blog_right
+    = render :partial => 'shared/testimonials'
+.clear_container 
     

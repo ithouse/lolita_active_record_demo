@@ -7,7 +7,7 @@
     .secondary_pages_content
       .blog_left
         %h1
-          = link_to 'News', articles_path
+          = link_to t('.News'), articles_path
         %br
         %p 
           - @articles.each do |article|
@@ -15,19 +15,5 @@
             %br
         = paginate @articles     
       .blog_right
-        #testimonials_manager_widget-3.widget.ww1231
-          .services_we_offer
-            %img.newspaper_icon.png{:alt => "Testimonials", :src => "http://zebramash.com/clients/lolita/wp-content/uploads/2012/07/testimonials.png"}
-            %h5 Testimonials
-            .box
-              .box_top
-              .box_middle
-                .testimonials
-                  %img.cite_icon.png{:alt => "Citation", :height => "19", :src => "http://zebramash.com/clients/lolita/wp-content/themes/creativejuice_3.0/images/cite_icon.png", :width => "21"}
-                  %cite Bonbon tiramisu cake. Faworki topping faworki cake danish. Fruitcake sweet marshmallow. Bear claw faworki chupa chups croissant apple pie faworki oat cake sugar plum oat cake.
-                  %h6.testimonial_name Martins
-                  .clear_container
-              .box_bottom
-          .clear_container
-        .clear_container
+        = render :partial => 'shared/testimonials'
     .clear_container
