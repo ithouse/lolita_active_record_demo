@@ -1,8 +1,8 @@
 - content_for :latest_project do
-  = render'articles/latest_project'
+  = render 'shared/latest_project'
   
 - content_for :sec_menu do
-  = render 'articles/sec_menu'
+  = render 'shared/sec_menu'
 
 .secondary_pages_content
   .blog_left.gallery
@@ -12,7 +12,6 @@
       = l(@article.publication_date, :format => :long)
     %p
       = @article.content.html_safe
-  .blog_right
-    = render :partial => 'shared/testimonials'
+  = render 'shared/blog_right'
 .clear_container 
     
