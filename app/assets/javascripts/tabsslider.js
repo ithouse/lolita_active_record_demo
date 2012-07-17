@@ -40,7 +40,7 @@ function changeSlide2this(number){
 
 		nextnumber = parseInt($next1[0].id.substring(5,6));
 
-		chengeSlideTab2this(nextnumber);
+		//chengeSlideTab2this(nextnumber);
 
 
 

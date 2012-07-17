@@ -1,21 +1,15 @@
 = javascript_include_tag "tabsslider.js"
 
 - content_for :latest_project do
-  .latest_project
+  .latest_project{:onload => {}}
     .project
-      #slide1.tabb.displayslide
-        .project_table
-          .project_screens.right
-            .phones.parallax
-              %div
-                = image_tag "cupcake3.png", :alt => "Cupcake"
-          .project_text_right
-            %h1 Cupcake
-            %p Cupcake ipsum dolor sit amet gummi bears oat cake. Candy pie chupa chups sweet. Liquorice tiramisu danish dragée. Sweet roll lollipop powder chocolate cake gummi bears jelly-o ice cream. Danish lollipop sweet roll liquorice. Chocolate cake caramels pie fruitcake sesame snaps danish pie.
+      - @slider.pictures.each_with_index do |picture, index|
+        - classname = index == 0 ? "tabb displayslide" : "tabb displaynone"
+        = render :partial => 'slide', :locals => {:picture => picture, :index => index, :classname => classname} 
 - content_for :sec_menu do
   :javascript
     var slideTimeout = 5000;   
-    var maxslidernumber = 1;
+    var maxslidernumber = 3;
   .sec_menu
     .sec_menu_content
       .previous_button
@@ -23,7 +17,7 @@
       .tabbicos.float_left
         %ul.project_bubles
           %li
-            %a#slide-tab1.active{:href => "javascript:void(0);", :onclick => "changeSlide2this(1);"}  
+            = link_to '', 'javascript:void(0);', :onclick => 'changeSlide2this(1);', :id => 'slide-tab1', :class => 'active'  
         %div{:style => "clear:both;"}
       .next_button{:style => "width:71px"}
         = link_to '', 'javascript:void(0);', :onclick => 'nextSlide();', :class => 'next'
@@ -62,8 +56,4 @@
           = link_to t('.sign in'), '/lolita'
     .clear_container
 
-:javascript
-  $(document).ready(function(){
-  $(".gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'facebook'});
-  });
 
