@@ -39,21 +39,7 @@
             %li
               = link_to article.title.capitalize, article_path(article)  
     .content_middle
-      #testimonials_manager_widget-2.panel.widget.ww1231
-        .services_we_offer
-          = image_tag 'testimonials.png', :class => 'newspaper_icon png'
-          %h5 Testimonials
-          .box
-            .box_top
-              .box_middle
-                .testimonials
-                  = image_tag 'cite_icon.png', :height => 19, :width => 21, :class => 'cite_icon png'
-                  %cite Bonbon tiramisu cake. Faworki topping faworki cake danish. Fruitcake sweet marshmallow. Bear claw faworki chupa chups croissant apple pie faworki oat cake sugar plum oat cake.
-                  %h6.testimonial_name Martins
-                  .clear_container
-            .box_bottom
-        .clear_container
-      .content_right
+      = render :partial => 'shared/blog_right'
     .content_right
       #text-3.panel.plast.widget.widget_text
         %h2= t('.sign in hint')
