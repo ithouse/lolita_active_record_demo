@@ -19,7 +19,7 @@ class Article < ActiveRecord::Base
     list  do
       search true
       pagination_method :list
-      column :title
+      column :title, :sortable => true
     end
 
     tab :content do
