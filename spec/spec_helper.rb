@@ -13,6 +13,7 @@ Capybara.default_driver = :webkit
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 require Rails.root.join("spec/env.rb")
+require Rails.root.join("spec/controller_env.rb")
 
 RSpec.configure do |config|
   config.include Devise::TestHelpers, :type => :controller
@@ -45,6 +46,7 @@ RSpec.configure do |config|
   end
 
   config.include LolitaActiveRecordDemoTestHelpers
+  config.include LolitaActiveRecordDemoControllerHelpers, :type => :controller
 end
 
 at_exit do

@@ -1,20 +1,18 @@
 - content_for :latest_project do
-  = render'articles/latest_project'
+  = render 'shared/latest_project'
+
 - content_for :sec_menu do
-  = render 'articles/sec_menu'      
-- content_for :content do
-  .content
-    .secondary_pages_content
-      .blog_left
-        %h1
-          = link_to t('.News'), articles_path
+  = render 'shared/sec_menu'      
+
+.secondary_pages_content
+  .blog_left
+    %h1
+      = link_to t('.News'), articles_path
+    %br
+    %p 
+      - @articles.each do |article|
+        = render :partial => 'article', :locals => {:article => article} 
         %br
-        %p 
-          - @articles.each do |article|
-            = render :partial => 'article', :locals => {:article => article} 
-            %br
-         
-        = paginate @articles     
-      .blog_right
-        = render :partial => 'shared/testimonials'
-    .clear_container
+    = paginate @articles     
+  = render :partial => 'shared/blog_right'
+.clear_container

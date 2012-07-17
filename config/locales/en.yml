@@ -54,5 +54,10 @@ en:
       copyright: '©  Lolita all rights reserved'
       privacy: 'privecy statement'
       terms: 'terms & conditions'
+    sec_menu:
+      Follow us on: 'Follow us on:'
+    latest_project:
+      title: Enter your preferred Header Title for this page.
+      subtitle: Enter your preferred Header SubTitle for this page.
 
 
