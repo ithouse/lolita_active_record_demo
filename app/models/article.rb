@@ -10,7 +10,8 @@ class Article < ActiveRecord::Base
 
   validates :content, :publication_date, :title, :presence => true
 
-  scope :by_newest, :order => 'publication_date DESC'
+  scope :latest, :order => 'publication_date DESC'
+  scope :published, where(:draft => false)
 
   lolita do
     list  do
@@ -36,9 +37,5 @@ class Article < ActiveRecord::Base
     else
       Rails.application.routes.url_helpers.article_path(self)
     end
-  end
-
-  def self.published
-    Article.where(:draft => false).by_newest
   end
 end
