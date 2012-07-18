@@ -1014,6 +1014,9 @@ input.submit_comment{
  .blog_left.gallery{
  	margin-bottom: 30px;
  }
+ .blog_left.gallery img{
+ max-width: 100%;
+ }
 .blog_right{
  width: 280px;
  float: right;
