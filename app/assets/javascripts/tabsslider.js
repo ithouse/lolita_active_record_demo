@@ -107,21 +107,6 @@ var slideTimer = null;
 var inanimation = false;
 var slideshow = true;
 
-$(document).ready(function() {
-	slideTimer =setInterval( "slideSwitch()", slideTimeout );
-	setSlidePause();
-	preloadSlide();
-
-
-
-});
-
-function preloadSlide() {
-	$.preloadImages(
-		'wp-content/themes/creativejuice/images/page.png',
-		"wp-content/themes/creativejuice/images/selected_page.png");
-}
-
 jQuery.preloadImages = function()
 {
   for(var i = 0; i<arguments.length; i++)
