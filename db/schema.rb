@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718065736) do
+ActiveRecord::Schema.define(:version => 20120718121916) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -114,11 +114,11 @@ ActiveRecord::Schema.define(:version => 20120718065736) do
 
   add_index "pictures", ["fileable_id"], :name => "index_pictures_on_fileable_id"
 
-  create_table "sliders", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "slides", :force => true do |t|
     t.string   "title"
-    t.boolean  "active"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "text_pages", :force => true do |t|

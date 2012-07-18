@@ -3,8 +3,8 @@
     .project_screens.right
       .phones.parallax
         %div
-          = image_tag(picture.asset.main, :alt => "Picture") if picture.asset?
+          = image_tag(slide.picture.asset.main, :alt => "Picture") if slide.picture.asset?
     .project_text_right
-      %h1= picture.title
-      %p= picture.description
+      %h1= slide.title
+      %p= slide.description
 
