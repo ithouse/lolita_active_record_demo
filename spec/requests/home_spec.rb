@@ -8,7 +8,7 @@ describe Article, :request => true do
       visit root_path
       articles = Article.latest.published.limit(Article::SHOW_IN_HOME_PAGE)
       articles.each do |article|
-        page.find('#recent-posts-4 ul').should have_content(article.title.capitalize)
+        page.find('#recent-posts-4 ul').should have_content(article.title)
       end
     end
 

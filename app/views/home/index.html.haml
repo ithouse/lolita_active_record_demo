@@ -1,30 +1,32 @@
-- content_for :latest_project do
-  .latest_project{:onload => {}}
-    .project
-      - @slider.pictures.each_with_index do |picture, index|
-        = render :partial => 'slide', :locals => {:picture => picture, :index => index} 
-- content_for :sec_menu do
-  :javascript
-    var slideTimeout = 5000;   
-    var maxslidernumber = #{@slider.pictures.size};
-    $(document).ready(function() {
-      slideTimer =setInterval( "slideSwitch()", slideTimeout );
-      setSlidePause();
-      $.preloadImages(#{get_preload_images_list(@slider)});
-    });
+- if @slider
+  - content_for :latest_project do
+    .latest_project{:onload => {}}
+      .project
+        - @slider.pictures.each_with_index do |picture, index|
+          = render :partial => 'slide', :locals => {:picture => picture, :index => index} 
+  - content_for :sec_menu do
+    :javascript
+      var slideTimeout = 5000;   
+      var maxslidernumber = #{@slider.pictures.size};
+      $(document).ready(function() {
+        slideTimer =setInterval( "slideSwitch()", slideTimeout );
+        setSlidePause();
+        $.preloadImages(#{get_preload_images_list(@slider)});
+      });
 
-  .sec_menu
-    .sec_menu_content
-      .previous_button
-        = link_to '', 'javascript:void(0);', :onclick => 'prevSlide();', :class => 'previous'
-      .tabbicos.float_left
-        %ul.project_bubles
-          %li
-            = link_to '', 'javascript:void(0);', :onclick => 'changeSlide2this(1);', :id => 'slide-tab1', :class => 'active'  
-        %div{:style => "clear:both;"}
-      .next_button{:style => "width:71px"}
-        = link_to '', 'javascript:void(0);', :onclick => 'nextSlide();', :class => 'next'
-      .clear_container     
+    .sec_menu
+      .sec_menu_content
+        .previous_button
+          = link_to '', 'javascript:void(0);', :onclick => 'prevSlide();', :class => 'previous'
+        .tabbicos.float_left
+          %ul.project_bubles
+            %li
+              = link_to '', 'javascript:void(0);', :onclick => 'changeSlide2this(1);', :id => 'slide-tab1', :class => 'active'  
+          %div{:style => "clear:both;"}
+        .next_button{:style => "width:71px"}
+          = link_to '', 'javascript:void(0);', :onclick => 'nextSlide();', :class => 'next'
+        .clear_container     
+          
 - content_for :content do
   .content_home
     .content_left
@@ -34,7 +36,7 @@
         %ul
           - @articles.each do |article|
             %li
-              = link_to article.title.capitalize, article_path(article)  
+              = link_to article.title, article_path(article)  
     .content_middle
       = render :partial => 'shared/blog_right'
     .content_right

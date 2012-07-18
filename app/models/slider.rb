@@ -3,6 +3,9 @@ class Slider < ActiveRecord::Base
 
   has_many :pictures, :as => :fileable, :class_name => "SliderPicture", :dependent => :destroy
   attr_accessible :title
+
+  scope :active, where(:active => true)
+
   lolita do
     list do
       column :title
@@ -22,5 +25,11 @@ class Slider < ActiveRecord::Base
 
   def title_picture
     pictures.first.try(:asset)
+  end
+
+  class << self
+    def home_page
+      active.first
+    end
   end
 end

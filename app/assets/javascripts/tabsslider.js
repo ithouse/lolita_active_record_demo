@@ -40,10 +40,6 @@ function changeSlide2this(number){
 
 		nextnumber = parseInt($next1[0].id.substring(5,6));
 
-		//chengeSlideTab2this(nextnumber);
-
-
-
 		if (1)
 		{
 			inanimation = true;
@@ -89,19 +85,6 @@ function changeSlide2this(number){
 
 }
 
-function chengeSlideTab2this(number){
-	var maxnumber = maxslidernumber ;
-	for(i =1;i<=maxnumber;i++)
-	{
-		if (number == i)
-		{
-			$('#slide-tab'+i)[0].className = 'active';
-		}else{
-			$('#slide-tab'+i)[0].className = '';
-		}
-	}
-}
-
 var lockslide = false;
 var slideTimer = null;
 var inanimation = false;
@@ -135,10 +118,6 @@ function slideSwitch() {
 		$active1.addClass('last-active');
 
 		nextnumber = parseInt($next1[0].id.substring(5,6));
-
-		chengeSlideTab2this(nextnumber);
-
-
 
 		if (1)
 		{

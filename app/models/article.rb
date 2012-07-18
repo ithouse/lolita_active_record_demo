@@ -53,6 +53,10 @@ class Article < ActiveRecord::Base
     def sorting(params)
       !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
     end
+
+    def home_page
+      latest.published.limit(Article::SHOW_IN_HOME_PAGE)
+    end
   end
   
 end
