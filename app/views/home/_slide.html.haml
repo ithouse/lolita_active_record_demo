@@ -5,6 +5,6 @@
         %div
           = image_tag(picture.asset.main, :alt => "Picture") if picture.asset?
     .project_text_right
-      %h1= picture.title.capitalize
-      %p= picture.description.capitalize
+      %h1= picture.title if picture.title?
+      %p= picture.description if picture.description?
 
