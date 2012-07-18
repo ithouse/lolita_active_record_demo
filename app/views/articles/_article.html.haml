@@ -4,4 +4,4 @@
   %p.subtitle
     = l(article.publication_date, :format => :long)
   %p
-    = truncate(article.content, :length => 255, :separator => '...').html_safe
+    = strip_tags(truncate(article.content, :length => 255, :separator => '...')).html_safe
