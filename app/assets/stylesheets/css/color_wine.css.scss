@@ -27,4 +27,9 @@ span.page{
   background: none;
   display: inline;
 }
-
+.textwidget#sign_in {
+margin-top: 10px;
+}
+.textwidget#sign_in a:hover{
+  text-decoration: underline;
+}

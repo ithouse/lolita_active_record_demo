@@ -44,8 +44,10 @@ en:
        
   home:
     index:
-      sign in hint: 'Sign in user: lolita@ithouse.lv password: lolita'
+      sign in hint: 'Sign in DEMO CMS'
       sign in: Sign in
+      login_name: 'email: lolita@ithouse.lv'
+      login_pass: 'password: lolita'
       News: News
   articles:
     index:

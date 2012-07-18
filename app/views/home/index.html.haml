@@ -42,8 +42,10 @@
     .content_right
       #text-3.panel.plast.widget.widget_text
         %h2= t('.sign in hint')
+        =  t('.login_name')
+        = t('.login_pass')
         .line
-        .textwidget
+        .textwidget#sign_in
           = link_to t('.sign in'), '/lolita'
     .clear_container
 

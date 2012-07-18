@@ -1010,9 +1010,17 @@ input.submit_comment{
  width: 552px;
  padding: 0 15px 0 15px;
  float: left;
+ word-wrap: break-word;
+ }
+ .blog_left p, h1{
+ padding-bottom: 25px;
+ }
+ .blog_left p.subtitle{
+ padding-bottom: 0px;
  }
  .blog_left.gallery{
  	margin-bottom: 30px;
+ 
  }
 .blog_right{
  width: 280px;
