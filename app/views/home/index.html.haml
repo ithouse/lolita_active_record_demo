@@ -2,12 +2,17 @@
   .latest_project{:onload => {}}
     .project
       - @slider.pictures.each_with_index do |picture, index|
-        - classname = index == 0 ? "tabb displayslide" : "tabb displaynone"
-        = render :partial => 'slide', :locals => {:picture => picture, :index => index, :classname => classname} 
+        = render :partial => 'slide', :locals => {:picture => picture, :index => index} 
 - content_for :sec_menu do
   :javascript
     var slideTimeout = 5000;   
-    var maxslidernumber = 3;
+    var maxslidernumber = #{@slider.pictures.size};
+    $(document).ready(function() {
+      slideTimer =setInterval( "slideSwitch()", slideTimeout );
+      setSlidePause();
+      $.preloadImages(#{get_preload_images_list(@slider)});
+    });
+
   .sec_menu
     .sec_menu_content
       .previous_button
