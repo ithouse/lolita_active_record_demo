@@ -4,8 +4,12 @@
       = image_tag('lolita-logo.png', :alt => 'Lolita', :class => 'logo png')
     .main_menu
       %ul#menu-mainmenu
-        %li#menu-item-11.menu-item.menu-item-type-post_type.menu-item-object-page
-          = link_to t('.About'), "#"
-        %li#menu-item-12.menu-item.menu-item-type-post_type.menu-item-object-page
-          = link_to t('.News'), articles_path
+        - menu = get_menu_root('header')
+        - menu && menu.children.each_with_index do |item, index|
+          - active = item.active?(request)
+          %li.menu-item.menu-item-type-post_type.menu-item-object-page{:class => (active ? "active" : "")}
+            = link_to item.name, item.url
+            - if active && item.children.any?
+              - content_for :sec_menu do
+                = render :partial => 'shared/sec_menu', :locals => {:menu => item}
       .clear

@@ -83,3 +83,21 @@ custom.css and it will override the style in this file. You have been warned! :)
   }
 }
 
+.sec_menu_content{
+  height:57px;
+  margin: 0 auto;
+  line-height:57px;
+  ul.menu {
+    font-size: 15px;
+    font-weight: bold;
+    li.menu-item {
+      float: left;
+      margin: 0 20px;
+    }
+    li.active a {
+      color: #ffffff;
+    }
+  }
+}
+
+
