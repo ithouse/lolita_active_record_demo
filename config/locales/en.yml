@@ -17,9 +17,9 @@ en:
       menu:
         one: Menu
         other: Menus
-      slider:
-        one: Slider
-        other: Slider      
+      slide:
+        one: Slide
+        other: Slides      
     attributes:
       admin:
         email: Email
@@ -35,9 +35,10 @@ en:
         title: Title
         publication_date: Publication Date
         draft: Save as draft
-      slider:
+      slide:
+        title: Title
         description: Description
-        active: Set as active slider
+        picture: Picture
       picture:
         title: Title
         description: Description    

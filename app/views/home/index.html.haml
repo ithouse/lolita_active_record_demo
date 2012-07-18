@@ -1,17 +1,17 @@
-- if @slider
+- if @slides
   - content_for :latest_project do
     .latest_project{:onload => {}}
       .project
-        - @slider.pictures.each_with_index do |picture, index|
-          = render :partial => 'slide', :locals => {:picture => picture, :index => index} 
+        - @slides.each_with_index do |slide, index|
+          = render :partial => 'slide', :locals => {:slide => slide, :index => index} 
   - content_for :sec_menu do
     :javascript
       var slideTimeout = 5000;   
-      var maxslidernumber = #{@slider.pictures.size};
+      var maxslidernumber = #{@slides.size};
       $(document).ready(function() {
         slideTimer =setInterval( "slideSwitch()", slideTimeout );
         setSlidePause();
-        $.preloadImages(#{get_preload_images_list(@slider)});
+        $.preloadImages(#{get_preload_images_list(@slides)});
       });
 
     .sec_menu
