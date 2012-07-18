@@ -36,7 +36,11 @@ en:
         publication_date: Publication Date
         draft: Save as draft
       slider:
-        description: Description  
+        description: Description
+        active: Set as active slider
+      picture:
+        title: Title
+        description: Description    
        
   home:
     index:
