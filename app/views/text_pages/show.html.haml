@@ -4,7 +4,7 @@
 .secondary_pages_content
   .blog_left.gallery
     %h1
-      = link_to @text_page.title, text_page_path(:slug => @text_page.slug)
+      = @text_page.title
     %p.subtitle
       = l(@text_page.updated_at, :format => :long)
     %p
