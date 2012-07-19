@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'thin', '1.4.1'
+gem 'mysql2'
 
 gem "lolita", :git => "git://github.com/ithouse/lolita.git", :ref => "817876689c3fadedea3adb405cf4ba6384b0bb4f"
 gem "lolita-file-upload", :git => "git://github.com/ithouse/lolita-file-upload.git", :ref => "fff16df659a0c3d8136dbf51556ecc2b24231c2d"
