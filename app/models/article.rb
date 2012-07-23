@@ -58,7 +58,7 @@ class Article < ActiveRecord::Base
       latest.published.limit(Article::HOME_PAGE_COUNT)
     end
 
-    def get_index
+    def get_index(params)
       latest.published.page(params[:page]).per(Article::PER_PAGE)
     end
   end

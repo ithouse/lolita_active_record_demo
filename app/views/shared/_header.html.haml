@@ -4,9 +4,8 @@
       = image_tag('lolita-logo.png', :alt => 'Lolita', :class => 'logo png')
     .main_menu
       %ul#menu-mainmenu
-        - menu = get_menu_root('header')
-        - menu && menu.children.each_with_index do |item, index|
-          - active = item.active?(request)
+        - menu = ApplicationMenu.get_menu_root('header')
+        - menu && ApplicationMenu.get_menu_items(menu, request) do |item, active|
           %li.menu-item.menu-item-type-post_type.menu-item-object-page{:class => (active ? "active" : "")}
             = link_to item.name, item.url
             - if active && item.children.any?
