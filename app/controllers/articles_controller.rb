@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index 
-    @articles = Article.latest.published.page(params[:page]).per(Article::PER_PAGE)
+    @articles = Article.get_index
   end
 
   def show
