@@ -21,7 +21,7 @@ describe TextPage, :request => true do
     it "can view text page title" do
       visit text_page_path(:slug => text_page.slug)
       page.current_path.should == "/#{text_page.slug}"
-      page.find('.blog_left.gallery h1 a').should have_content(text_page.title)
+      page.find('.blog_left.gallery h1').should have_content(text_page.title)
     end
 
     it "can view text page content" do 
