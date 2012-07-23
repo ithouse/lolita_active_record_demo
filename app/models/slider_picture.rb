@@ -3,5 +3,5 @@ class SliderPicture < ActiveRecord::Base
   mount_uploader :asset, SliderPictureUploader
   attr_accessible :description, :title
 
-  belongs_to :fileable, :polymorphic=>true
+  belongs_to :fileable, :polymorphic => true
 end

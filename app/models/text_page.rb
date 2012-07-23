@@ -32,13 +32,13 @@ class TextPage < ActiveRecord::Base
   end
 
   class << self
-    def list(page,per_page,options)
+    def list(page, per_page, options)
       params = options[:request].query_parameters
       order(sorting(params)).page(page).per(per_page)
     end
 
     def sorting(params)
-      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
+      !params[:s].nil? ? params[:s].gsub(',', ' ').gsub('|', ',') : 'title ASC'
     end
   end
 

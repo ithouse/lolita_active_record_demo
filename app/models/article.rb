@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   extend FriendlyId
   self.table_name = 'messages'
   PER_PAGE = 5
-  SHOW_IN_HOME_PAGE = 3
+  HOME_PAGE_COUNT = 3
 
   friendly_id :title, :use => :slugged
 
@@ -45,17 +45,17 @@ class Article < ActiveRecord::Base
   end
 
   class << self
-    def list(page,per_page,options)
+    def list(page, per_page, options)
       params = options[:request].query_parameters
       order(sorting(params)).page(page).per(per_page)
     end
 
     def sorting(params)
-      !params[:s].nil? ? params[:s].gsub(',',' ').gsub('|',',') : 'title ASC'
+      !params[:s].nil? ? params[:s].gsub(',', ' ').gsub('|', ',') : 'title ASC'
     end
 
-    def home_page
-      latest.published.limit(Article::SHOW_IN_HOME_PAGE)
+    def get_home_page
+      latest.published.limit(Article::HOME_PAGE_COUNT)
     end
   end
   

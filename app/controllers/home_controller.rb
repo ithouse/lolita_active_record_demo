@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.home_page
+    @articles = Article.get_home_page
     @slides = Slide.all
   end
 end
