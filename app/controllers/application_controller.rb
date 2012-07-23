@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
     rescue_from Lolita::RecordNotFound, :with => :redirect_to_lolita_root
   end
 
+  private
+
   def redirect_to_lolita_root
     redirect_to "/lolita"
   end
