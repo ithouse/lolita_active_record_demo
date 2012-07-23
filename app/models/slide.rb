@@ -24,4 +24,12 @@ class Slide < ActiveRecord::Base
     self.picture = SliderPicture.find(id)
   end
 
+  def main
+    self.picture.asset.main
+  end
+
+  def main?
+    self.picture.asset?
+  end
+
 end
