@@ -34,9 +34,10 @@ function changeSlide2this(number){
 	var $next1 = $('#slide'+number);
 
 	$active1.addClass('last-active');
-
-
-
+	$('ul.project_bubles li a').each(function(index){
+		$(this).removeClass('active');
+	});
+	$('#slide-tab' + number).addClass('active');
 
 		nextnumber = parseInt($next1[0].id.substring(5,6));
 

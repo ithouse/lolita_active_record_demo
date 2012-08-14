@@ -20,8 +20,9 @@
           = link_to '', 'javascript:void(0);', :onclick => 'prevSlide();', :class => 'previous'
         .tabbicos.float_left
           %ul.project_bubles
-            %li
-              = link_to '', 'javascript:void(0);', :onclick => 'changeSlide2this(1);', :id => 'slide-tab1', :class => 'active'  
+            - @slider.slides.each_with_index do |slide, index|
+              %li
+                = link_to '', 'javascript:void(0);', :onclick => "changeSlide2this(#{index + 1});", :id => "slide-tab#{index + 1}", :class => index == 0 ? 'active' : ''
           %div{:style => "clear:both;"}
         .next_button{:style => "width:71px"}
           = link_to '', 'javascript:void(0);', :onclick => 'nextSlide();', :class => 'next'
