@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
   include Lolita::Configuration
   extend FriendlyId
-  self.table_name = 'messages'
+  
   PER_PAGE = 5
   HOME_PAGE_COUNT = 3
 

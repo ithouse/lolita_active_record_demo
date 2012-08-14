@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120718130745) do
+ActiveRecord::Schema.define(:version => 20120814084544) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(:version => 20120718130745) do
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "publication_date"
+    t.boolean  "draft"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "slug"
+  end
+
+  add_index "articles", ["slug"], :name => "index_messages_on_slug"
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
@@ -86,18 +98,6 @@ ActiveRecord::Schema.define(:version => 20120718130745) do
   end
 
   add_index "lolita_menus", ["name"], :name => "index_lolita_menus_on_name"
-
-  create_table "messages", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "publication_date"
-    t.boolean  "draft"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.string   "slug"
-  end
-
-  add_index "messages", ["slug"], :name => "index_messages_on_slug"
 
   create_table "pictures", :force => true do |t|
     t.string   "asset"
