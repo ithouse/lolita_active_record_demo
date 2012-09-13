@@ -15,7 +15,7 @@ namespace :db do
 end
 
 def backup_filename
-  File.join(Rails.root, "..", "shared", "system", "db_backup.sql")
+  File.join(Rails.root, "..", "..", "shared", "system", "db_backup.sql")
 end
 
 def get_db_config
