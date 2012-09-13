@@ -13,12 +13,16 @@ namespace :uploads do
   end
 end
 
+def system_dir
+  File.join(Rails.root, "..", "..", "shared", "system")
+end
+
 def uploads_dir
-  File.join(Rails.root, "..", "..", "shared", "system", "uploads")
+  File.join(system_dir, "uploads")
 end
 
 def backup_dir
-  File.join(Rails.root, "..", "..", "shared", "system", "uploads_backup")
+  File.join(system_dir, "uploads_backup")
 end
 
 def backup_dir_for_restore
@@ -26,7 +30,7 @@ def backup_dir_for_restore
 end
 
 def uploads_dir_for_restore
-  File.join(Rails.root, "..", "..", "shared", "system")
+  File.join(system_dir)
 end
 
 def create_backup_dir
