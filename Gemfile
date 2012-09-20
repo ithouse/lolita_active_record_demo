@@ -21,6 +21,7 @@ gem 'devise', '~> 2.1.2'
 gem 'carrierwave', '~> 0.5.8'
 gem "haml"
 gem "friendly_id", "~> 4.0.1"
+gem "whenever", "~> 0.7.3"
 
 # Gems used only for assets and not required
 # in production environments by default.
